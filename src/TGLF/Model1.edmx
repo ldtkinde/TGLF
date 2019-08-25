@@ -1,0 +1,3261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TGLFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACCNT">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="UNAME" Type="varchar" MaxLength="50" />
+          <Property Name="ADD1" Type="varchar" MaxLength="30" />
+          <Property Name="ADD2" Type="varchar" MaxLength="30" />
+          <Property Name="CITY" Type="varchar" MaxLength="30" />
+          <Property Name="STATE" Type="varchar" MaxLength="20" />
+          <Property Name="ZIP" Type="varchar" MaxLength="11" />
+          <Property Name="COUNTRY" Type="varchar" MaxLength="30" />
+          <Property Name="EMAIL_ADD" Type="varchar" MaxLength="80" />
+          <Property Name="ANNUALPYMNTEXPIRED" Type="datetime" />
+          <Property Name="CC_HOLDER" Type="varchar" MaxLength="50" />
+          <Property Name="CC_NM" Type="varchar" MaxLength="20" />
+          <Property Name="MACADDRESS" Type="varchar" MaxLength="30" />
+          <Property Name="REFERREDBY" Type="varchar" MaxLength="30" />
+          <Property Name="REGTIME" Type="datetime" />
+          <Property Name="LASTPAY100" Type="int" />
+          <Property Name="PAYPERIOD" Type="varchar" MaxLength="20" />
+          <Property Name="LASTPAYTIME" Type="datetime" />
+          <Property Name="CC_TYPE" Type="varchar" MaxLength="20" />
+          <Property Name="CC_FOUR" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="CARD">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="CARDTYPE" Type="int" />
+          <Property Name="CARD" Type="varchar" MaxLength="1400" />
+        </EntityType>
+        <EntityType Name="COURSE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="40" />
+          <Property Name="CAP1" Type="int" />
+          <Property Name="CAP2" Type="int" />
+          <Property Name="CAP3" Type="int" />
+          <Property Name="CAP4" Type="int" />
+          <Property Name="CAP5" Type="int" />
+          <Property Name="CAP6" Type="int" />
+          <Property Name="CAP7" Type="int" />
+          <Property Name="CAP8" Type="int" />
+          <Property Name="CAP9" Type="int" />
+          <Property Name="CAP10" Type="int" />
+          <Property Name="CAP11" Type="int" />
+          <Property Name="CAP12" Type="int" />
+          <Property Name="CAP13" Type="int" />
+          <Property Name="CAP14" Type="int" />
+          <Property Name="CAP15" Type="int" />
+          <Property Name="CAP16" Type="int" />
+          <Property Name="CAP17" Type="int" />
+          <Property Name="CAP18" Type="int" />
+          <Property Name="PAR1" Type="int" />
+          <Property Name="PAR2" Type="int" />
+          <Property Name="PAR3" Type="int" />
+          <Property Name="PAR4" Type="int" />
+          <Property Name="PAR5" Type="int" />
+          <Property Name="PAR6" Type="int" />
+          <Property Name="PAR7" Type="int" />
+          <Property Name="PAR8" Type="int" />
+          <Property Name="PAR9" Type="int" />
+          <Property Name="PAR10" Type="int" />
+          <Property Name="PAR11" Type="int" />
+          <Property Name="PAR12" Type="int" />
+          <Property Name="PAR13" Type="int" />
+          <Property Name="PAR14" Type="int" />
+          <Property Name="PAR15" Type="int" />
+          <Property Name="PAR16" Type="int" />
+          <Property Name="PAR17" Type="int" />
+          <Property Name="PAR18" Type="int" />
+          <Property Name="YDG1" Type="int" />
+          <Property Name="YDG2" Type="int" />
+          <Property Name="YDG3" Type="int" />
+          <Property Name="YDG4" Type="int" />
+          <Property Name="YDG5" Type="int" />
+          <Property Name="YDG6" Type="int" />
+          <Property Name="YDG7" Type="int" />
+          <Property Name="YDG8" Type="int" />
+          <Property Name="YDG9" Type="int" />
+          <Property Name="YDG10" Type="int" />
+          <Property Name="YDG11" Type="int" />
+          <Property Name="YDG12" Type="int" />
+          <Property Name="YDG13" Type="int" />
+          <Property Name="YDG14" Type="int" />
+          <Property Name="YDG15" Type="int" />
+          <Property Name="YDG16" Type="int" />
+          <Property Name="YDG17" Type="int" />
+          <Property Name="YDG18" Type="int" />
+          <Property Name="RATING" Type="float" />
+          <Property Name="SLOPE" Type="int" />
+          <Property Name="DELETED" Type="int" />
+          <Property Name="GREENSIZE" Type="int" />
+          <Property Name="WD1" Type="int" />
+          <Property Name="WD2" Type="int" />
+          <Property Name="WD3" Type="int" />
+          <Property Name="WD4" Type="int" />
+          <Property Name="WD5" Type="int" />
+          <Property Name="WD6" Type="int" />
+          <Property Name="WD7" Type="int" />
+          <Property Name="WD8" Type="int" />
+          <Property Name="WD9" Type="int" />
+          <Property Name="WD10" Type="int" />
+          <Property Name="WD11" Type="int" />
+          <Property Name="WD12" Type="int" />
+          <Property Name="WD13" Type="int" />
+          <Property Name="WD14" Type="int" />
+          <Property Name="WD15" Type="int" />
+          <Property Name="WD16" Type="int" />
+          <Property Name="WD17" Type="int" />
+          <Property Name="WD18" Type="int" />
+          <Property Name="DP1" Type="int" />
+          <Property Name="DP2" Type="int" />
+          <Property Name="DP3" Type="int" />
+          <Property Name="DP4" Type="int" />
+          <Property Name="DP5" Type="int" />
+          <Property Name="DP6" Type="int" />
+          <Property Name="DP7" Type="int" />
+          <Property Name="DP8" Type="int" />
+          <Property Name="DP9" Type="int" />
+          <Property Name="DP10" Type="int" />
+          <Property Name="DP11" Type="int" />
+          <Property Name="DP12" Type="int" />
+          <Property Name="DP13" Type="int" />
+          <Property Name="DP14" Type="int" />
+          <Property Name="DP15" Type="int" />
+          <Property Name="DP16" Type="int" />
+          <Property Name="DP17" Type="int" />
+          <Property Name="DP18" Type="int" />
+          <Property Name="LR1" Type="int" />
+          <Property Name="LR2" Type="int" />
+          <Property Name="LR3" Type="int" />
+          <Property Name="LR4" Type="int" />
+          <Property Name="LR5" Type="int" />
+          <Property Name="LR6" Type="int" />
+          <Property Name="LR7" Type="int" />
+          <Property Name="LR8" Type="int" />
+          <Property Name="LR9" Type="int" />
+          <Property Name="LR10" Type="int" />
+          <Property Name="LR11" Type="int" />
+          <Property Name="LR12" Type="int" />
+          <Property Name="LR13" Type="int" />
+          <Property Name="LR14" Type="int" />
+          <Property Name="LR15" Type="int" />
+          <Property Name="LR16" Type="int" />
+          <Property Name="LR17" Type="int" />
+          <Property Name="LR18" Type="int" />
+          <Property Name="FB1" Type="int" />
+          <Property Name="FB2" Type="int" />
+          <Property Name="FB3" Type="int" />
+          <Property Name="FB4" Type="int" />
+          <Property Name="FB5" Type="int" />
+          <Property Name="FB6" Type="int" />
+          <Property Name="FB7" Type="int" />
+          <Property Name="FB8" Type="int" />
+          <Property Name="FB9" Type="int" />
+          <Property Name="FB10" Type="int" />
+          <Property Name="FB11" Type="int" />
+          <Property Name="FB12" Type="int" />
+          <Property Name="FB13" Type="int" />
+          <Property Name="FB14" Type="int" />
+          <Property Name="FB15" Type="int" />
+          <Property Name="FB16" Type="int" />
+          <Property Name="FB17" Type="int" />
+          <Property Name="FB18" Type="int" />
+          <Property Name="YARDAGE" Type="int" />
+          <Property Name="TEECOLOR" Type="int" />
+        </EntityType>
+        <EntityType Name="ENTRY">
+          <Key>
+            <PropertyRef Name="PLYERID" />
+          </Key>
+          <Property Name="PLYERID" Type="int" Nullable="false" />
+          <Property Name="H_1" Type="int" />
+          <Property Name="H_2" Type="int" />
+          <Property Name="H_3" Type="int" />
+          <Property Name="H_4" Type="int" />
+          <Property Name="H_5" Type="int" />
+          <Property Name="H_6" Type="int" />
+          <Property Name="H_7" Type="int" />
+          <Property Name="H_8" Type="int" />
+          <Property Name="H_9" Type="int" />
+          <Property Name="H_10" Type="int" />
+          <Property Name="H_11" Type="int" />
+          <Property Name="H_12" Type="int" />
+          <Property Name="H_13" Type="int" />
+          <Property Name="H_14" Type="int" />
+          <Property Name="H_15" Type="int" />
+          <Property Name="H_16" Type="int" />
+          <Property Name="H_17" Type="int" />
+          <Property Name="H_18" Type="int" />
+          <Property Name="H_19" Type="int" />
+          <Property Name="FRONT" Type="int" />
+          <Property Name="BACK" Type="int" />
+          <Property Name="TOTAL" Type="int" />
+          <Property Name="ADJ_SCORE" Type="int" />
+        </EntityType>
+        <EntityType Name="EVENT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="TOURN_NO" Type="int" Nullable="false" />
+          <Property Name="PLYERS_PER_TM" Type="int" />
+          <Property Name="NO_ROUNDS" Type="int" />
+          <Property Name="START_ROUND" Type="int" />
+          <Property Name="R1_FORMAT" Type="int" />
+          <Property Name="R2_FORMAT" Type="int" />
+          <Property Name="R3_FORMAT" Type="int" />
+          <Property Name="R4_FORMAT" Type="int" />
+          <Property Name="R5_FORMAT" Type="int" />
+          <Property Name="R1_COURSE" Type="int" />
+          <Property Name="R2_COURSE" Type="int" />
+          <Property Name="R3_COURSE" Type="int" />
+          <Property Name="R4_COURSE" Type="int" />
+          <Property Name="R5_COURSE" Type="int" />
+          <Property Name="SKINS" Type="int" />
+          <Property Name="NETSKINS" Type="int" />
+          <Property Name="HDCP_PCT" Type="int" />
+          <Property Name="IND_NET" Type="int" />
+          <Property Name="BLIND" Type="int" />
+          <Property Name="IND_GRS" Type="int" />
+          <Property Name="HDCP_TYP" Type="int" />
+          <Property Name="GM_NAME" Type="varchar" MaxLength="40" />
+          <Property Name="EV_NAME" Type="varchar" MaxLength="40" />
+          <Property Name="TM_SKINS" Type="int" />
+          <Property Name="LEAGUE" Type="int" />
+          <Property Name="X1_COURSE" Type="int" />
+          <Property Name="X2_COURSE" Type="int" />
+          <Property Name="X3_COURSE" Type="int" />
+          <Property Name="X4_COURSE" Type="int" />
+          <Property Name="X5_COURSE" Type="int" />
+          <Property Name="Y1_COURSE" Type="int" />
+          <Property Name="Y2_COURSE" Type="int" />
+          <Property Name="Y3_COURSE" Type="int" />
+          <Property Name="Y4_COURSE" Type="int" />
+          <Property Name="Y5_COURSE" Type="int" />
+          <Property Name="Z1_COURSE" Type="int" />
+          <Property Name="Z2_COURSE" Type="int" />
+          <Property Name="Z3_COURSE" Type="int" />
+          <Property Name="Z4_COURSE" Type="int" />
+          <Property Name="Z5_COURSE" Type="int" />
+          <Property Name="NINER" Type="int" />
+          <Property Name="F_OR_B1" Type="int" />
+          <Property Name="F_OR_B2" Type="int" />
+          <Property Name="F_OR_B3" Type="int" />
+          <Property Name="F_OR_B4" Type="int" />
+          <Property Name="F_OR_B5" Type="int" />
+          <Property Name="MULT_COURSE" Type="int" />
+          <Property Name="RND_ROBIN" Type="int" />
+          <Property Name="SENT_UP" Type="int" />
+          <Property Name="QUOTABASE" Type="int" />
+          <Property Name="TMCAP_PCENT" Type="int" />
+          <Property Name="NOTE_WALKERS" Type="int" />
+          <Property Name="TR_OR_RND" Type="int" />
+          <Property Name="FLIGHTS" Type="int" />
+          <Property Name="RAT_ADJ" Type="int" />
+          <Property Name="SKIN_SPAN_TEE" Type="int" />
+          <Property Name="R6_FORMAT" Type="int" />
+          <Property Name="R6_COURSE" Type="int" />
+          <Property Name="X6_COURSE" Type="int" />
+          <Property Name="Y6_COURSE" Type="int" />
+          <Property Name="Z6_COURSE" Type="int" />
+          <Property Name="F_OR_B6" Type="int" />
+          <Property Name="JUNK" Type="int" />
+          <Property Name="FBNINES" Type="int" />
+          <Property Name="TRUNKDOLL" Type="int" />
+          <Property Name="ROUNDDOLL" Type="int" />
+          <Property Name="SPONSOR" Type="int" />
+          <Property Name="RP_RESULTS" Type="int" />
+          <Property Name="TM_JUNK" Type="int" />
+          <Property Name="POST_SCORES" Type="int" />
+          <Property Name="LEAGRND" Type="int" />
+          <Property Name="LEAGTEEBOX" Type="int" />
+          <Property Name="HDCP_PCT_W" Type="int" />
+          <Property Name="AVG_HDCP" Type="int" />
+          <Property Name="CAPOFFLOW" Type="int" />
+        </EntityType>
+        <EntityType Name="FACILITY">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="FACILID" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="FACILID" Type="int" Nullable="false" />
+          <Property Name="NAME1" Type="varchar" MaxLength="50" />
+          <Property Name="NAME2" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS1" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS2" Type="varchar" MaxLength="50" />
+          <Property Name="CITY" Type="varchar" MaxLength="30" />
+          <Property Name="STATE" Type="varchar" MaxLength="2" />
+          <Property Name="PHONE1" Type="varchar" MaxLength="12" />
+          <Property Name="PHONE2" Type="varchar" MaxLength="12" />
+          <Property Name="ZIP" Type="varchar" MaxLength="10" />
+          <Property Name="EMAIL1" Type="varchar" MaxLength="50" />
+          <Property Name="EMAIL2" Type="varchar" MaxLength="50" />
+          <Property Name="ANNUALPYMNTTIME" Type="datetime" />
+          <Property Name="CC_HOLDER" Type="varchar" MaxLength="50" />
+          <Property Name="CC_TYPE" Type="varchar" MaxLength="10" />
+          <Property Name="CC_NO" Type="varchar" MaxLength="20" />
+          <Property Name="LOGO" Type="varbinary(max)" />
+          <Property Name="BLIP1" Type="varchar" MaxLength="90" />
+          <Property Name="BLIP2" Type="varchar" MaxLength="90" />
+        </EntityType>
+        <EntityType Name="FLIGHTS">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="FLIGHT" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="FLIGHT" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="FORMAT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+            <PropertyRef Name="RNDNO" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="TOURN_NO" Type="int" Nullable="false" />
+          <Property Name="RNDNO" Type="int" Nullable="false" />
+          <Property Name="HOLE1" Type="int" />
+          <Property Name="HOLE2" Type="int" />
+          <Property Name="HOLE3" Type="int" />
+          <Property Name="HOLE4" Type="int" />
+          <Property Name="HOLE5" Type="int" />
+          <Property Name="HOLE6" Type="int" />
+          <Property Name="HOLE7" Type="int" />
+          <Property Name="HOLE8" Type="int" />
+          <Property Name="HOLE9" Type="int" />
+          <Property Name="HOLE10" Type="int" />
+          <Property Name="HOLE11" Type="int" />
+          <Property Name="HOLE12" Type="int" />
+          <Property Name="HOLE13" Type="int" />
+          <Property Name="HOLE14" Type="int" />
+          <Property Name="HOLE15" Type="int" />
+          <Property Name="HOLE16" Type="int" />
+          <Property Name="HOLE17" Type="int" />
+          <Property Name="HOLE18" Type="int" />
+        </EntityType>
+        <EntityType Name="HDCP">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYERID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="RNDNO" />
+            <PropertyRef Name="LEAGUE" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYERID" Type="int" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="RNDNO" Type="int" Nullable="false" />
+          <Property Name="LEAGUE" Type="int" Nullable="false" />
+          <Property Name="GRS_SCORE" Type="int" />
+          <Property Name="ADJ_SCORE" Type="int" />
+          <Property Name="CRS_NAME" Type="varchar" MaxLength="40" />
+          <Property Name="CRS_RATING" Type="float" />
+          <Property Name="CRS_SLOPE" Type="int" />
+          <Property Name="DIFFERENTIAL" Type="float" />
+          <Property Name="HIDEIT" Type="int" />
+        </EntityType>
+        <EntityType Name="LEAGPARAMS">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ROUND" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ROUND" Type="int" Nullable="false" />
+          <Property Name="POINTS" Type="int" />
+          <Property Name="EXTRAS" Type="int" />
+          <Property Name="MEDAL" Type="int" />
+          <Property Name="ABCPOINTS" Type="int" />
+          <Property Name="ABCEXTRAS" Type="int" />
+          <Property Name="ABCNET" Type="int" />
+          <Property Name="ABCOFFLOW" Type="int" />
+        </EntityType>
+        <EntityType Name="LEAGUE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="40" />
+          <Property Name="MFORMAT" Type="int" />
+          <Property Name="LASTRND" Type="int" />
+          <Property Name="PPT" Type="int" />
+          <Property Name="DIVS" Type="int" />
+          <Property Name="TPD" Type="int" />
+          <Property Name="KEEP_LAST" Type="int" />
+          <Property Name="HI_THROW" Type="int" />
+          <Property Name="LO_THROW" Type="int" />
+          <Property Name="RNDS" Type="int" />
+          <Property Name="R1" Type="int" />
+          <Property Name="R2" Type="int" />
+          <Property Name="R3" Type="int" />
+          <Property Name="R4" Type="int" />
+          <Property Name="R5" Type="int" />
+          <Property Name="R6" Type="int" />
+          <Property Name="R7" Type="int" />
+          <Property Name="R8" Type="int" />
+          <Property Name="R9" Type="int" />
+          <Property Name="R10" Type="int" />
+          <Property Name="R11" Type="int" />
+          <Property Name="R12" Type="int" />
+          <Property Name="R13" Type="int" />
+          <Property Name="R14" Type="int" />
+          <Property Name="R15" Type="int" />
+          <Property Name="R16" Type="int" />
+          <Property Name="R17" Type="int" />
+          <Property Name="R18" Type="int" />
+          <Property Name="R19" Type="int" />
+          <Property Name="R20" Type="int" />
+          <Property Name="R21" Type="int" />
+          <Property Name="R22" Type="int" />
+          <Property Name="R23" Type="int" />
+          <Property Name="R24" Type="int" />
+          <Property Name="COURSEID" Type="int" />
+          <Property Name="NINEHOLE" Type="int" />
+          <Property Name="FORMAT" Type="int" />
+          <Property Name="POINTS" Type="int" />
+          <Property Name="EXTRAS" Type="int" />
+          <Property Name="MEDAL" Type="int" />
+          <Property Name="POINTFMT" Type="int" />
+          <Property Name="DIVISIONS" Type="int" />
+          <Property Name="NUMTEAMS" Type="int" />
+          <Property Name="ABCPOINTS" Type="int" />
+          <Property Name="ABCEXTRAS" Type="int" />
+          <Property Name="ABCNET" Type="int" />
+          <Property Name="ABCOFFLOW" Type="int" />
+        </EntityType>
+        <EntityType Name="LGSCORE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="LEAGUE" />
+            <PropertyRef Name="RNDNO" />
+            <PropertyRef Name="PLYERID" />
+            <PropertyRef Name="NET" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="LEAGUE" Type="int" Nullable="false" />
+          <Property Name="RNDNO" Type="int" Nullable="false" />
+          <Property Name="PLYERID" Type="int" Nullable="false" />
+          <Property Name="NET" Type="int" Nullable="false" />
+          <Property Name="T0_CP" Type="int" />
+          <Property Name="T0_TM" Type="int" />
+          <Property Name="ZNAME" Type="varchar" MaxLength="40" />
+          <Property Name="H_1" Type="int" />
+          <Property Name="H_2" Type="int" />
+          <Property Name="H_3" Type="int" />
+          <Property Name="H_4" Type="int" />
+          <Property Name="H_5" Type="int" />
+          <Property Name="H_6" Type="int" />
+          <Property Name="H_7" Type="int" />
+          <Property Name="H_8" Type="int" />
+          <Property Name="H_9" Type="int" />
+          <Property Name="H_10" Type="int" />
+          <Property Name="H_11" Type="int" />
+          <Property Name="H_12" Type="int" />
+          <Property Name="H_13" Type="int" />
+          <Property Name="H_14" Type="int" />
+          <Property Name="H_15" Type="int" />
+          <Property Name="H_16" Type="int" />
+          <Property Name="H_17" Type="int" />
+          <Property Name="H_18" Type="int" />
+          <Property Name="H_19" Type="int" />
+          <Property Name="H_20" Type="int" />
+          <Property Name="H_21" Type="int" />
+          <Property Name="H_22" Type="int" />
+          <Property Name="H_23" Type="int" />
+          <Property Name="H_24" Type="int" />
+          <Property Name="C_IND" Type="int" />
+          <Property Name="C_TM" Type="int" />
+          <Property Name="TEEORDER" Type="int" />
+          <Property Name="ORGORDER" Type="int" />
+          <Property Name="ORD1" Type="int" />
+          <Property Name="ORD2" Type="int" />
+          <Property Name="ORD3" Type="int" />
+          <Property Name="ORD4" Type="int" />
+          <Property Name="ORD5" Type="int" />
+          <Property Name="ORD6" Type="int" />
+          <Property Name="ORD7" Type="int" />
+          <Property Name="ORD8" Type="int" />
+          <Property Name="ORD9" Type="int" />
+          <Property Name="ORD10" Type="int" />
+          <Property Name="ORD11" Type="int" />
+          <Property Name="ORD12" Type="int" />
+          <Property Name="ORD13" Type="int" />
+          <Property Name="ORD14" Type="int" />
+          <Property Name="ORD15" Type="int" />
+          <Property Name="ORD16" Type="int" />
+          <Property Name="ORD17" Type="int" />
+          <Property Name="ORD18" Type="int" />
+          <Property Name="ORD19" Type="int" />
+          <Property Name="ORD20" Type="int" />
+          <Property Name="ORD21" Type="int" />
+          <Property Name="ORD22" Type="int" />
+          <Property Name="ORD23" Type="int" />
+          <Property Name="ORD24" Type="int" />
+        </EntityType>
+        <EntityType Name="MEMBERSHIP">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PID" Type="int" Nullable="false" />
+          <Property Name="MAINADMIN" Type="char" MaxLength="1" />
+          <Property Name="COADMIN" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="PAYMENTS">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="PYMNT_NO" Type="int" />
+          <Property Name="PYMNT_TIME" Type="datetime" />
+          <Property Name="AMT_PAID_100" Type="int" />
+          <Property Name="NO_ROUNDS" Type="int" />
+          <Property Name="RND_ROBIN" Type="int" />
+          <Property Name="USERID" Type="varchar" MaxLength="12" />
+          <Property Name="NO_SEC_EVENTS" Type="int" />
+          <Property Name="AMT_PAID" Type="float" />
+          <Property Name="CC_TYPE" Type="varchar" MaxLength="8" />
+          <Property Name="CC_LAST_4" Type="varchar" MaxLength="4" />
+          <Property Name="CC_NO" Type="varchar" MaxLength="20" />
+          <Property Name="EV_NAME" Type="varchar" MaxLength="40" />
+          <Property Name="NO_WEEKS" Type="int" />
+          <Property Name="START_TIME" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PLAYERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="MEMBER" Type="varchar" MaxLength="15" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="HDCP" Type="float" />
+          <Property Name="GENDER" Type="char" MaxLength="1" />
+          <Property Name="FNAME" Type="varchar" MaxLength="20" />
+          <Property Name="LNAME" Type="varchar" MaxLength="20" />
+          <Property Name="PNAME" Type="varchar" MaxLength="42" />
+          <Property Name="USGATAG" Type="varchar" MaxLength="15" />
+          <Property Name="DELETED" Type="int" />
+          <Property Name="FEMALE" Type="int" />
+          <Property Name="HANDLE" Type="varchar" MaxLength="30" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="REGISTRY">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="FACILID" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="FACILID" Type="int" Nullable="false" />
+          <Property Name="EVENTIDX" Type="int" />
+          <Property Name="GAMEIDX" Type="int" />
+          <Property Name="LEAGIDX" Type="int" />
+          <Property Name="BASEPAY" Type="int" />
+          <Property Name="CARDTYPE" Type="int" />
+          <Property Name="DISPROUND" Type="int" />
+          <Property Name="DISPBLOWS" Type="int" />
+          <Property Name="TEAMHDCP" Type="int" />
+          <Property Name="BOARDLINES" Type="int" />
+          <Property Name="SCORED1" Type="varchar" MaxLength="90" />
+          <Property Name="SCORED2" Type="varchar" MaxLength="90" />
+          <Property Name="SCORED3" Type="varchar" MaxLength="50" />
+          <Property Name="SCORED4" Type="varchar" MaxLength="50" />
+          <Property Name="EXPIRETEXT" Type="varchar" MaxLength="50" />
+          <Property Name="LMARGIN" Type="int" />
+          <Property Name="TMARGIN" Type="int" />
+          <Property Name="SBLABELS" Type="int" />
+          <Property Name="BGCOLOR" Type="int" />
+          <Property Name="BSIZE1" Type="int" />
+          <Property Name="BSIZE2" Type="int" />
+          <Property Name="BSIZE3" Type="int" />
+          <Property Name="BSIZE4" Type="int" />
+          <Property Name="BSIZE5" Type="int" />
+          <Property Name="BORIENT1" Type="int" />
+          <Property Name="BORIENT2" Type="int" />
+          <Property Name="BORIENT3" Type="int" />
+          <Property Name="BORIENT4" Type="int" />
+          <Property Name="BORIENT5" Type="int" />
+          <Property Name="BPAGE1" Type="int" />
+          <Property Name="BPAGE2" Type="int" />
+          <Property Name="BPAGE3" Type="int" />
+          <Property Name="BPAGE4" Type="int" />
+          <Property Name="BPAGE5" Type="int" />
+          <Property Name="BCOLOR" Type="int" />
+          <Property Name="BNCOLOR" Type="int" />
+          <Property Name="BNSIZE" Type="int" />
+          <Property Name="BSTYLE" Type="int" />
+          <Property Name="BNSTYLE" Type="int" />
+          <Property Name="BFONT" Type="varchar" MaxLength="50" />
+          <Property Name="BNFONT" Type="varchar" MaxLength="50" />
+          <Property Name="BNHEIGHT" Type="int" />
+          <Property Name="GAPTIME" Type="int" />
+          <Property Name="DEMOCOUNT" Type="int" />
+          <Property Name="D9" Type="int" />
+          <Property Name="D18" Type="int" />
+          <Property Name="AUTODELETE" Type="int" />
+          <Property Name="AUTODAYS" Type="int" />
+          <Property Name="CERTNO" Type="int" />
+          <Property Name="TIEBREAK" Type="int" />
+          <Property Name="WHICHCAP" Type="int" />
+          <Property Name="ROUNDROB" Type="int" />
+          <Property Name="MATCHPLAY" Type="int" />
+          <Property Name="QUOTABASE" Type="int" />
+          <Property Name="KEEP_LAST" Type="int" />
+          <Property Name="HI_THROW" Type="int" />
+          <Property Name="LO_THROW" Type="int" />
+          <Property Name="QUAD_B" Type="int" />
+          <Property Name="TRIP_B" Type="int" />
+          <Property Name="DBL_B" Type="int" />
+          <Property Name="BOGIE" Type="int" />
+          <Property Name="PAR" Type="int" />
+          <Property Name="BIRDIE" Type="int" />
+          <Property Name="EAGLE" Type="int" />
+          <Property Name="D_EAGLE" Type="int" />
+          <Property Name="FORCE_LNF" Type="int" />
+          <Property Name="PROXY_URL" Type="varchar" MaxLength="80" />
+          <Property Name="PROXY_PORT" Type="varchar" MaxLength="10" />
+          <Property Name="PROXY_USERID" Type="varchar" MaxLength="30" />
+          <Property Name="PROXY_PWORD" Type="varchar" MaxLength="20" />
+          <Property Name="PROXY_USE" Type="int" />
+          <Property Name="TIME_CONNECTED_SERV" Type="datetime" />
+          <Property Name="TIME_CONNECTED_COMP" Type="datetime" />
+          <Property Name="LAST_RUN_TIME_COMP" Type="datetime" />
+          <Property Name="RUN_COUNT_UNCONNECTED" Type="int" />
+          <Property Name="LAST_ANNUALFEE" Type="int" />
+          <Property Name="LAST_WEEKFEE" Type="int" />
+          <Property Name="SPONSOR_IDX" Type="int" />
+          <Property Name="R1TEXT" Type="varchar" MaxLength="50" />
+          <Property Name="R2TEXT" Type="varchar" MaxLength="50" />
+          <Property Name="R3TEXT" Type="varchar" MaxLength="50" />
+          <Property Name="R4TEXT" Type="varchar" MaxLength="50" />
+          <Property Name="R5TEXT" Type="varchar" MaxLength="50" />
+          <Property Name="R6TEXT" Type="varchar" MaxLength="50" />
+          <Property Name="TEECOLOR" Type="int" />
+          <Property Name="LBP1COLOR" Type="int" />
+          <Property Name="LBP2COLOR" Type="int" />
+          <Property Name="LBFONT1COLOR" Type="int" />
+          <Property Name="LBFONT2COLOR" Type="int" />
+          <Property Name="LBFONTSIZE" Type="int" />
+          <Property Name="LBFONTSTYLE" Type="int" />
+          <Property Name="LBFONTNAME" Type="varchar" MaxLength="30" />
+          <Property Name="LBIPAUSE" Type="int" />
+          <Property Name="LBSSPEEDM" Type="int" />
+          <Property Name="LBSSPEED" Type="int" />
+          <Property Name="REPORTDIR" Type="varchar" MaxLength="80" />
+          <Property Name="LBOARDDIR" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="REMOVED">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+            <PropertyRef Name="PLYERID" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="TOURN_NO" Type="int" Nullable="false" />
+          <Property Name="PLYERID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESULTS">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="TOURN_NO" Type="int" Nullable="false" />
+          <Property Name="PURSE" Type="int" />
+          <Property Name="NAME" Type="varchar" MaxLength="99" />
+          <Property Name="COUNTIT" Type="int" />
+          <Property Name="PLACES" Type="int" />
+          <Property Name="RNDS_FIN" Type="int" />
+          <Property Name="NO_OF_RNDS" Type="int" />
+          <Property Name="PPT" Type="int" />
+          <Property Name="ST_RND" Type="int" />
+          <Property Name="THERND" Type="int" />
+          <Property Name="NETPURSE" Type="int" />
+          <Property Name="R1" Type="int" />
+          <Property Name="R2" Type="int" />
+          <Property Name="R3" Type="int" />
+          <Property Name="R4" Type="int" />
+          <Property Name="R5" Type="int" />
+          <Property Name="NETSKINS" Type="int" />
+          <Property Name="GRSSKINS" Type="int" />
+          <Property Name="P1" Type="float" />
+          <Property Name="P2" Type="float" />
+          <Property Name="P3" Type="float" />
+          <Property Name="P4" Type="float" />
+          <Property Name="P5" Type="float" />
+          <Property Name="P6" Type="float" />
+          <Property Name="P7" Type="float" />
+          <Property Name="P8" Type="float" />
+          <Property Name="P9" Type="float" />
+          <Property Name="P10" Type="float" />
+          <Property Name="P11" Type="float" />
+          <Property Name="P12" Type="float" />
+          <Property Name="P13" Type="float" />
+          <Property Name="P14" Type="float" />
+          <Property Name="P15" Type="float" />
+          <Property Name="P16" Type="float" />
+          <Property Name="P17" Type="float" />
+          <Property Name="P18" Type="float" />
+          <Property Name="P19" Type="float" />
+          <Property Name="P20" Type="float" />
+          <Property Name="P21" Type="float" />
+          <Property Name="P22" Type="float" />
+          <Property Name="CUSTOMPAY" Type="int" />
+          <Property Name="BASEPAY" Type="int" />
+          <Property Name="GPURSE_R1" Type="int" />
+          <Property Name="GPURSE_R2" Type="int" />
+          <Property Name="GPURSE_R3" Type="int" />
+          <Property Name="GPURSE_R4" Type="int" />
+          <Property Name="GPURSE_R5" Type="int" />
+          <Property Name="NPURSE_R1" Type="int" />
+          <Property Name="NPURSE_R2" Type="int" />
+          <Property Name="NPURSE_R3" Type="int" />
+          <Property Name="NPURSE_R4" Type="int" />
+          <Property Name="NPURSE_R5" Type="int" />
+          <Property Name="GPURSE_R6" Type="int" />
+          <Property Name="NPURSE_R6" Type="int" />
+          <Property Name="R6" Type="int" />
+          <Property Name="C1" Type="int" />
+          <Property Name="C2" Type="int" />
+          <Property Name="C3" Type="int" />
+          <Property Name="C4" Type="int" />
+          <Property Name="C1_GPURSE_R1" Type="int" />
+          <Property Name="C1_NPURSE_R1" Type="int" />
+          <Property Name="C2_GPURSE_R1" Type="int" />
+          <Property Name="C2_NPURSE_R1" Type="int" />
+          <Property Name="C3_GPURSE_R1" Type="int" />
+          <Property Name="C3_NPURSE_R1" Type="int" />
+          <Property Name="C4_GPURSE_R1" Type="int" />
+          <Property Name="C4_NPURSE_R1" Type="int" />
+          <Property Name="C1_GPURSE_R2" Type="int" />
+          <Property Name="C1_NPURSE_R2" Type="int" />
+          <Property Name="C2_GPURSE_R2" Type="int" />
+          <Property Name="C2_NPURSE_R2" Type="int" />
+          <Property Name="C3_GPURSE_R2" Type="int" />
+          <Property Name="C3_NPURSE_R2" Type="int" />
+          <Property Name="C4_GPURSE_R2" Type="int" />
+          <Property Name="C4_NPURSE_R2" Type="int" />
+          <Property Name="C1_GPURSE_R3" Type="int" />
+          <Property Name="C1_NPURSE_R3" Type="int" />
+          <Property Name="C2_GPURSE_R3" Type="int" />
+          <Property Name="C2_NPURSE_R3" Type="int" />
+          <Property Name="C3_GPURSE_R3" Type="int" />
+          <Property Name="C3_NPURSE_R3" Type="int" />
+          <Property Name="C4_GPURSE_R3" Type="int" />
+          <Property Name="C4_NPURSE_R3" Type="int" />
+          <Property Name="C1_GPURSE_R4" Type="int" />
+          <Property Name="C1_NPURSE_R4" Type="int" />
+          <Property Name="C2_GPURSE_R4" Type="int" />
+          <Property Name="C2_NPURSE_R4" Type="int" />
+          <Property Name="C3_GPURSE_R4" Type="int" />
+          <Property Name="C3_NPURSE_R4" Type="int" />
+          <Property Name="C4_GPURSE_R4" Type="int" />
+          <Property Name="C4_NPURSE_R4" Type="int" />
+          <Property Name="C1_GPURSE_R5" Type="int" />
+          <Property Name="C1_NPURSE_R5" Type="int" />
+          <Property Name="C2_GPURSE_R5" Type="int" />
+          <Property Name="C2_NPURSE_R5" Type="int" />
+          <Property Name="C3_GPURSE_R5" Type="int" />
+          <Property Name="C3_NPURSE_R5" Type="int" />
+          <Property Name="C4_GPURSE_R5" Type="int" />
+          <Property Name="C4_NPURSE_R5" Type="int" />
+          <Property Name="C1_GPURSE_R6" Type="int" />
+          <Property Name="C1_NPURSE_R6" Type="int" />
+          <Property Name="C2_GPURSE_R6" Type="int" />
+          <Property Name="C2_NPURSE_R6" Type="int" />
+          <Property Name="C3_GPURSE_R6" Type="int" />
+          <Property Name="C3_NPURSE_R6" Type="int" />
+          <Property Name="C4_GPURSE_R6" Type="int" />
+          <Property Name="C4_NPURSE_R6" Type="int" />
+          <Property Name="JUNK_SKINS" Type="int" />
+          <Property Name="J1_PURSE" Type="int" />
+          <Property Name="J2_PURSE" Type="int" />
+          <Property Name="J3_PURSE" Type="int" />
+          <Property Name="J4_PURSE" Type="int" />
+          <Property Name="J5_PURSE" Type="int" />
+          <Property Name="J6_PURSE" Type="int" />
+          <Property Name="J1_COUNT" Type="int" />
+          <Property Name="J2_COUNT" Type="int" />
+          <Property Name="J3_COUNT" Type="int" />
+          <Property Name="J4_COUNT" Type="int" />
+          <Property Name="J5_COUNT" Type="int" />
+          <Property Name="J6_COUNT" Type="int" />
+          <Property Name="JNET_SKINS" Type="int" />
+          <Property Name="FLIGHTED_SKINS" Type="int" />
+          <Property Name="LEADER_B" Type="int" />
+        </EntityType>
+        <EntityType Name="SCORES">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="RNDNO" />
+            <PropertyRef Name="PLYERID" />
+            <PropertyRef Name="NET" />
+            <PropertyRef Name="T0_TM" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="RNDNO" Type="int" Nullable="false" />
+          <Property Name="PLYERID" Type="int" Nullable="false" />
+          <Property Name="CAPDEX" Type="float" />
+          <Property Name="HDCP" Type="int" />
+          <Property Name="NET" Type="int" Nullable="false" />
+          <Property Name="THE_FLIGHT" Type="char" MaxLength="1" />
+          <Property Name="T0_CP" Type="int" />
+          <Property Name="T1_CP" Type="int" />
+          <Property Name="T2_CP" Type="int" />
+          <Property Name="T3_CP" Type="int" />
+          <Property Name="T4_CP" Type="int" />
+          <Property Name="T5_CP" Type="int" />
+          <Property Name="T6_CP" Type="int" />
+          <Property Name="T7_CP" Type="int" />
+          <Property Name="T8_CP" Type="int" />
+          <Property Name="T0_TM" Type="int" Nullable="false" />
+          <Property Name="T1_TM" Type="int" />
+          <Property Name="T2_TM" Type="int" />
+          <Property Name="T3_TM" Type="int" />
+          <Property Name="T4_TM" Type="int" />
+          <Property Name="T5_TM" Type="int" />
+          <Property Name="T6_TM" Type="int" />
+          <Property Name="T7_TM" Type="int" />
+          <Property Name="T8_TM" Type="int" />
+          <Property Name="SK_R1" Type="int" />
+          <Property Name="SK_N1" Type="int" />
+          <Property Name="SK_R2" Type="int" />
+          <Property Name="SK_R3" Type="int" />
+          <Property Name="SK_R4" Type="int" />
+          <Property Name="SK_R5" Type="int" />
+          <Property Name="H_1" Type="int" />
+          <Property Name="H_2" Type="int" />
+          <Property Name="H_3" Type="int" />
+          <Property Name="H_4" Type="int" />
+          <Property Name="H_5" Type="int" />
+          <Property Name="H_6" Type="int" />
+          <Property Name="H_7" Type="int" />
+          <Property Name="H_8" Type="int" />
+          <Property Name="H_9" Type="int" />
+          <Property Name="H_10" Type="int" />
+          <Property Name="H_11" Type="int" />
+          <Property Name="H_12" Type="int" />
+          <Property Name="H_13" Type="int" />
+          <Property Name="H_14" Type="int" />
+          <Property Name="H_15" Type="int" />
+          <Property Name="H_16" Type="int" />
+          <Property Name="H_17" Type="int" />
+          <Property Name="H_18" Type="int" />
+          <Property Name="H_IN" Type="int" />
+          <Property Name="H_OUT" Type="int" />
+          <Property Name="H_TOT" Type="int" />
+          <Property Name="H_IN_6" Type="int" />
+          <Property Name="H_IN_3" Type="int" />
+          <Property Name="H_OUT_6" Type="int" />
+          <Property Name="H_OUT_3" Type="int" />
+          <Property Name="ADJ_SCORE" Type="int" />
+          <Property Name="C0TOT" Type="int" />
+          <Property Name="C1TOT" Type="int" />
+          <Property Name="C2TOT" Type="int" />
+          <Property Name="C3TOT" Type="int" />
+          <Property Name="C4TOT" Type="int" />
+          <Property Name="C5TOT" Type="int" />
+          <Property Name="C6TOT" Type="int" />
+          <Property Name="C7TOT" Type="int" />
+          <Property Name="C8TOT" Type="int" />
+          <Property Name="CH_TOT" Type="int" />
+          <Property Name="TEEORDER" Type="int" />
+          <Property Name="ORGORDER" Type="int" />
+          <Property Name="FLIGHT" Type="int" />
+          <Property Name="CX0" Type="int" />
+          <Property Name="CX1" Type="int" />
+          <Property Name="CX2" Type="int" />
+          <Property Name="CX3" Type="int" />
+          <Property Name="CX4" Type="int" />
+          <Property Name="CX5" Type="int" />
+          <Property Name="CX6" Type="int" />
+          <Property Name="CX7" Type="int" />
+          <Property Name="CX8" Type="int" />
+          <Property Name="DUMMY" Type="int" />
+          <Property Name="ZNAME" Type="varchar" MaxLength="32" />
+          <Property Name="FX0" Type="int" />
+          <Property Name="FX1" Type="int" />
+          <Property Name="FX2" Type="int" />
+          <Property Name="FX3" Type="int" />
+          <Property Name="FX4" Type="int" />
+          <Property Name="FX5" Type="int" />
+          <Property Name="FX6" Type="int" />
+          <Property Name="FX7" Type="int" />
+          <Property Name="FX8" Type="int" />
+          <Property Name="BX0" Type="int" />
+          <Property Name="BX1" Type="int" />
+          <Property Name="BX2" Type="int" />
+          <Property Name="BX3" Type="int" />
+          <Property Name="BX4" Type="int" />
+          <Property Name="BX5" Type="int" />
+          <Property Name="BX6" Type="int" />
+          <Property Name="BX7" Type="int" />
+          <Property Name="BX8" Type="int" />
+          <Property Name="WALKER" Type="int" />
+          <Property Name="COURSE_GRP" Type="int" />
+          <Property Name="JUNK" Type="int" />
+          <Property Name="RPTHRU" Type="int" />
+          <Property Name="RP_TOT" Type="int" />
+          <Property Name="RP0TOT" Type="int" />
+          <Property Name="RP1TOT" Type="int" />
+          <Property Name="RP2TOT" Type="int" />
+          <Property Name="RP3TOT" Type="int" />
+          <Property Name="RP4TOT" Type="int" />
+          <Property Name="RP5TOT" Type="int" />
+          <Property Name="RP6TOT" Type="int" />
+          <Property Name="RP7TOT" Type="int" />
+          <Property Name="RP8TOT" Type="int" />
+          <Property Name="RPX0" Type="int" />
+          <Property Name="RPX1" Type="int" />
+          <Property Name="RPX2" Type="int" />
+          <Property Name="RPX3" Type="int" />
+          <Property Name="RPX4" Type="int" />
+          <Property Name="RPX5" Type="int" />
+          <Property Name="RPX6" Type="int" />
+          <Property Name="RPX7" Type="int" />
+          <Property Name="RPX8" Type="int" />
+          <Property Name="RP_FX0" Type="int" />
+          <Property Name="RP_FX1" Type="int" />
+          <Property Name="RP_FX2" Type="int" />
+          <Property Name="RP_FX3" Type="int" />
+          <Property Name="RP_FX4" Type="int" />
+          <Property Name="RP_FX5" Type="int" />
+          <Property Name="RP_FX6" Type="int" />
+          <Property Name="RP_FX7" Type="int" />
+          <Property Name="RP_FX8" Type="int" />
+          <Property Name="RP_BX0" Type="int" />
+          <Property Name="RP_BX1" Type="int" />
+          <Property Name="RP_BX2" Type="int" />
+          <Property Name="RP_BX3" Type="int" />
+          <Property Name="RP_BX4" Type="int" />
+          <Property Name="RP_BX5" Type="int" />
+          <Property Name="RP_BX6" Type="int" />
+          <Property Name="RP_BX7" Type="int" />
+          <Property Name="RP_BX8" Type="int" />
+          <Property Name="RP_OUT" Type="int" />
+          <Property Name="RP_OUT_3" Type="int" />
+          <Property Name="RP_OUT_6" Type="int" />
+          <Property Name="RP_IN" Type="int" />
+          <Property Name="RP_IN_3" Type="int" />
+          <Property Name="RP_IN_6" Type="int" />
+          <Property Name="T0_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T0_CALPRICE" Type="int" />
+          <Property Name="T1_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T1_CALPRICE" Type="int" />
+          <Property Name="T2_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T2_CALPRICE" Type="int" />
+          <Property Name="T3_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T3_CALPRICE" Type="int" />
+          <Property Name="T4_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T4_CALPRICE" Type="int" />
+          <Property Name="T5_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T5_CALPRICE" Type="int" />
+          <Property Name="T6_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T6_CALPRICE" Type="int" />
+          <Property Name="T7_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T7_CALPRICE" Type="int" />
+          <Property Name="T8_CALOWNER" Type="varchar" MaxLength="40" />
+          <Property Name="T8_CALPRICE" Type="int" />
+          <Property Name="FEMALE" Type="int" />
+          <Property Name="MATCHORD" Type="int" />
+          <Property Name="T0_MT" Type="int" />
+          <Property Name="XINDEX" Type="float" />
+        </EntityType>
+        <EntityType Name="TEETIME">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="RNDNO" />
+          </Key>
+          <Property Name="FACID" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="PLYFLD" Type="datetime" Nullable="false" />
+          <Property Name="PLYFLDNO" Type="int" Nullable="false" />
+          <Property Name="RNDNO" Type="int" Nullable="false" />
+          <Property Name="COURSE" Type="int" />
+          <Property Name="STARTTIME" Type="datetime" />
+          <Property Name="STARTTIME2" Type="datetime" />
+          <Property Name="STARTTIME3" Type="datetime" />
+          <Property Name="STARTTIME4" Type="datetime" />
+          <Property Name="GAPMINUTES" Type="int" />
+          <Property Name="GAP2" Type="int" />
+          <Property Name="GAP3" Type="int" />
+          <Property Name="GAP4" Type="int" />
+          <Property Name="STARTHOLE" Type="int" />
+          <Property Name="STARTHOLE2" Type="int" />
+          <Property Name="STARTHOLE3" Type="int" />
+          <Property Name="STARTHOLE4" Type="int" />
+          <Property Name="STARTGROUP" Type="int" />
+          <Property Name="DIRECTION" Type="int" />
+          <Property Name="SHOTGUN" Type="int" />
+          <Property Name="TWOTIMES" Type="int" />
+          <Property Name="THREETIMES" Type="int" />
+          <Property Name="FOURTIMES" Type="int" />
+          <Property Name="ONECOUNT" Type="int" />
+          <Property Name="TWOCOUNT" Type="int" />
+          <Property Name="THREECNT" Type="int" />
+          <Property Name="XSOME" Type="int" />
+          <Property Name="PPCART" Type="int" />
+          <Property Name="PPTEAM" Type="int" />
+          <Property Name="HOLE1" Type="int" />
+          <Property Name="HOLE2" Type="int" />
+          <Property Name="HOLE3" Type="int" />
+          <Property Name="HOLE4" Type="int" />
+          <Property Name="HOLE5" Type="int" />
+          <Property Name="HOLE6" Type="int" />
+          <Property Name="HOLE7" Type="int" />
+          <Property Name="HOLE8" Type="int" />
+          <Property Name="HOLE9" Type="int" />
+          <Property Name="HOLE10" Type="int" />
+          <Property Name="HOLE11" Type="int" />
+          <Property Name="HOLE12" Type="int" />
+          <Property Name="HOLE13" Type="int" />
+          <Property Name="HOLE14" Type="int" />
+          <Property Name="HOLE15" Type="int" />
+          <Property Name="HOLE16" Type="int" />
+          <Property Name="HOLE17" Type="int" />
+          <Property Name="HOLE18" Type="int" />
+        </EntityType>
+        <EntityContainer Name="TGLFModelStoreContainer">
+          <EntitySet Name="ACCNT" EntityType="Self.ACCNT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARD" EntityType="Self.CARD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COURSE" EntityType="Self.COURSE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ENTRY" EntityType="Self.ENTRY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EVENT" EntityType="Self.EVENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FACILITY" EntityType="Self.FACILITY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FLIGHTS" EntityType="Self.FLIGHTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FORMAT" EntityType="Self.FORMAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HDCP" EntityType="Self.HDCP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LEAGPARAMS" EntityType="Self.LEAGPARAMS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LEAGUE" EntityType="Self.LEAGUE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LGSCORE" EntityType="Self.LGSCORE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MEMBERSHIP" EntityType="Self.MEMBERSHIP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAYMENTS" EntityType="Self.PAYMENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PLAYERS" EntityType="Self.PLAYERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTRY" EntityType="Self.REGISTRY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REMOVED" EntityType="Self.REMOVED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESULTS" EntityType="Self.RESULTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCORES" EntityType="Self.SCORES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEETIME" EntityType="Self.TEETIME" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TGLFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACCNT">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADD1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ADD2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTRY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL_ADD" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ANNUALPYMNTEXPIRED" Type="DateTime" Precision="3" />
+          <Property Name="CC_HOLDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CC_NM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MACADDRESS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="REFERREDBY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="REGTIME" Type="DateTime" Precision="3" />
+          <Property Name="LASTPAY100" Type="Int32" />
+          <Property Name="PAYPERIOD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LASTPAYTIME" Type="DateTime" Precision="3" />
+          <Property Name="CC_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CC_FOUR" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CARD">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="CARDTYPE" Type="Int32" />
+          <Property Name="CARD1" Type="String" MaxLength="1400" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="COURSE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CAP1" Type="Int32" />
+          <Property Name="CAP2" Type="Int32" />
+          <Property Name="CAP3" Type="Int32" />
+          <Property Name="CAP4" Type="Int32" />
+          <Property Name="CAP5" Type="Int32" />
+          <Property Name="CAP6" Type="Int32" />
+          <Property Name="CAP7" Type="Int32" />
+          <Property Name="CAP8" Type="Int32" />
+          <Property Name="CAP9" Type="Int32" />
+          <Property Name="CAP10" Type="Int32" />
+          <Property Name="CAP11" Type="Int32" />
+          <Property Name="CAP12" Type="Int32" />
+          <Property Name="CAP13" Type="Int32" />
+          <Property Name="CAP14" Type="Int32" />
+          <Property Name="CAP15" Type="Int32" />
+          <Property Name="CAP16" Type="Int32" />
+          <Property Name="CAP17" Type="Int32" />
+          <Property Name="CAP18" Type="Int32" />
+          <Property Name="PAR1" Type="Int32" />
+          <Property Name="PAR2" Type="Int32" />
+          <Property Name="PAR3" Type="Int32" />
+          <Property Name="PAR4" Type="Int32" />
+          <Property Name="PAR5" Type="Int32" />
+          <Property Name="PAR6" Type="Int32" />
+          <Property Name="PAR7" Type="Int32" />
+          <Property Name="PAR8" Type="Int32" />
+          <Property Name="PAR9" Type="Int32" />
+          <Property Name="PAR10" Type="Int32" />
+          <Property Name="PAR11" Type="Int32" />
+          <Property Name="PAR12" Type="Int32" />
+          <Property Name="PAR13" Type="Int32" />
+          <Property Name="PAR14" Type="Int32" />
+          <Property Name="PAR15" Type="Int32" />
+          <Property Name="PAR16" Type="Int32" />
+          <Property Name="PAR17" Type="Int32" />
+          <Property Name="PAR18" Type="Int32" />
+          <Property Name="YDG1" Type="Int32" />
+          <Property Name="YDG2" Type="Int32" />
+          <Property Name="YDG3" Type="Int32" />
+          <Property Name="YDG4" Type="Int32" />
+          <Property Name="YDG5" Type="Int32" />
+          <Property Name="YDG6" Type="Int32" />
+          <Property Name="YDG7" Type="Int32" />
+          <Property Name="YDG8" Type="Int32" />
+          <Property Name="YDG9" Type="Int32" />
+          <Property Name="YDG10" Type="Int32" />
+          <Property Name="YDG11" Type="Int32" />
+          <Property Name="YDG12" Type="Int32" />
+          <Property Name="YDG13" Type="Int32" />
+          <Property Name="YDG14" Type="Int32" />
+          <Property Name="YDG15" Type="Int32" />
+          <Property Name="YDG16" Type="Int32" />
+          <Property Name="YDG17" Type="Int32" />
+          <Property Name="YDG18" Type="Int32" />
+          <Property Name="RATING" Type="Double" />
+          <Property Name="SLOPE" Type="Int32" />
+          <Property Name="DELETED" Type="Int32" />
+          <Property Name="GREENSIZE" Type="Int32" />
+          <Property Name="WD1" Type="Int32" />
+          <Property Name="WD2" Type="Int32" />
+          <Property Name="WD3" Type="Int32" />
+          <Property Name="WD4" Type="Int32" />
+          <Property Name="WD5" Type="Int32" />
+          <Property Name="WD6" Type="Int32" />
+          <Property Name="WD7" Type="Int32" />
+          <Property Name="WD8" Type="Int32" />
+          <Property Name="WD9" Type="Int32" />
+          <Property Name="WD10" Type="Int32" />
+          <Property Name="WD11" Type="Int32" />
+          <Property Name="WD12" Type="Int32" />
+          <Property Name="WD13" Type="Int32" />
+          <Property Name="WD14" Type="Int32" />
+          <Property Name="WD15" Type="Int32" />
+          <Property Name="WD16" Type="Int32" />
+          <Property Name="WD17" Type="Int32" />
+          <Property Name="WD18" Type="Int32" />
+          <Property Name="DP1" Type="Int32" />
+          <Property Name="DP2" Type="Int32" />
+          <Property Name="DP3" Type="Int32" />
+          <Property Name="DP4" Type="Int32" />
+          <Property Name="DP5" Type="Int32" />
+          <Property Name="DP6" Type="Int32" />
+          <Property Name="DP7" Type="Int32" />
+          <Property Name="DP8" Type="Int32" />
+          <Property Name="DP9" Type="Int32" />
+          <Property Name="DP10" Type="Int32" />
+          <Property Name="DP11" Type="Int32" />
+          <Property Name="DP12" Type="Int32" />
+          <Property Name="DP13" Type="Int32" />
+          <Property Name="DP14" Type="Int32" />
+          <Property Name="DP15" Type="Int32" />
+          <Property Name="DP16" Type="Int32" />
+          <Property Name="DP17" Type="Int32" />
+          <Property Name="DP18" Type="Int32" />
+          <Property Name="LR1" Type="Int32" />
+          <Property Name="LR2" Type="Int32" />
+          <Property Name="LR3" Type="Int32" />
+          <Property Name="LR4" Type="Int32" />
+          <Property Name="LR5" Type="Int32" />
+          <Property Name="LR6" Type="Int32" />
+          <Property Name="LR7" Type="Int32" />
+          <Property Name="LR8" Type="Int32" />
+          <Property Name="LR9" Type="Int32" />
+          <Property Name="LR10" Type="Int32" />
+          <Property Name="LR11" Type="Int32" />
+          <Property Name="LR12" Type="Int32" />
+          <Property Name="LR13" Type="Int32" />
+          <Property Name="LR14" Type="Int32" />
+          <Property Name="LR15" Type="Int32" />
+          <Property Name="LR16" Type="Int32" />
+          <Property Name="LR17" Type="Int32" />
+          <Property Name="LR18" Type="Int32" />
+          <Property Name="FB1" Type="Int32" />
+          <Property Name="FB2" Type="Int32" />
+          <Property Name="FB3" Type="Int32" />
+          <Property Name="FB4" Type="Int32" />
+          <Property Name="FB5" Type="Int32" />
+          <Property Name="FB6" Type="Int32" />
+          <Property Name="FB7" Type="Int32" />
+          <Property Name="FB8" Type="Int32" />
+          <Property Name="FB9" Type="Int32" />
+          <Property Name="FB10" Type="Int32" />
+          <Property Name="FB11" Type="Int32" />
+          <Property Name="FB12" Type="Int32" />
+          <Property Name="FB13" Type="Int32" />
+          <Property Name="FB14" Type="Int32" />
+          <Property Name="FB15" Type="Int32" />
+          <Property Name="FB16" Type="Int32" />
+          <Property Name="FB17" Type="Int32" />
+          <Property Name="FB18" Type="Int32" />
+          <Property Name="YARDAGE" Type="Int32" />
+          <Property Name="TEECOLOR" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ENTRY">
+          <Key>
+            <PropertyRef Name="PLYERID" />
+          </Key>
+          <Property Name="PLYERID" Type="Int32" Nullable="false" />
+          <Property Name="H_1" Type="Int32" />
+          <Property Name="H_2" Type="Int32" />
+          <Property Name="H_3" Type="Int32" />
+          <Property Name="H_4" Type="Int32" />
+          <Property Name="H_5" Type="Int32" />
+          <Property Name="H_6" Type="Int32" />
+          <Property Name="H_7" Type="Int32" />
+          <Property Name="H_8" Type="Int32" />
+          <Property Name="H_9" Type="Int32" />
+          <Property Name="H_10" Type="Int32" />
+          <Property Name="H_11" Type="Int32" />
+          <Property Name="H_12" Type="Int32" />
+          <Property Name="H_13" Type="Int32" />
+          <Property Name="H_14" Type="Int32" />
+          <Property Name="H_15" Type="Int32" />
+          <Property Name="H_16" Type="Int32" />
+          <Property Name="H_17" Type="Int32" />
+          <Property Name="H_18" Type="Int32" />
+          <Property Name="H_19" Type="Int32" />
+          <Property Name="FRONT" Type="Int32" />
+          <Property Name="BACK" Type="Int32" />
+          <Property Name="TOTAL" Type="Int32" />
+          <Property Name="ADJ_SCORE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EVENT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="TOURN_NO" Type="Int32" Nullable="false" />
+          <Property Name="PLYERS_PER_TM" Type="Int32" />
+          <Property Name="NO_ROUNDS" Type="Int32" />
+          <Property Name="START_ROUND" Type="Int32" />
+          <Property Name="R1_FORMAT" Type="Int32" />
+          <Property Name="R2_FORMAT" Type="Int32" />
+          <Property Name="R3_FORMAT" Type="Int32" />
+          <Property Name="R4_FORMAT" Type="Int32" />
+          <Property Name="R5_FORMAT" Type="Int32" />
+          <Property Name="R1_COURSE" Type="Int32" />
+          <Property Name="R2_COURSE" Type="Int32" />
+          <Property Name="R3_COURSE" Type="Int32" />
+          <Property Name="R4_COURSE" Type="Int32" />
+          <Property Name="R5_COURSE" Type="Int32" />
+          <Property Name="SKINS" Type="Int32" />
+          <Property Name="NETSKINS" Type="Int32" />
+          <Property Name="HDCP_PCT" Type="Int32" />
+          <Property Name="IND_NET" Type="Int32" />
+          <Property Name="BLIND" Type="Int32" />
+          <Property Name="IND_GRS" Type="Int32" />
+          <Property Name="HDCP_TYP" Type="Int32" />
+          <Property Name="GM_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="EV_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TM_SKINS" Type="Int32" />
+          <Property Name="LEAGUE" Type="Int32" />
+          <Property Name="X1_COURSE" Type="Int32" />
+          <Property Name="X2_COURSE" Type="Int32" />
+          <Property Name="X3_COURSE" Type="Int32" />
+          <Property Name="X4_COURSE" Type="Int32" />
+          <Property Name="X5_COURSE" Type="Int32" />
+          <Property Name="Y1_COURSE" Type="Int32" />
+          <Property Name="Y2_COURSE" Type="Int32" />
+          <Property Name="Y3_COURSE" Type="Int32" />
+          <Property Name="Y4_COURSE" Type="Int32" />
+          <Property Name="Y5_COURSE" Type="Int32" />
+          <Property Name="Z1_COURSE" Type="Int32" />
+          <Property Name="Z2_COURSE" Type="Int32" />
+          <Property Name="Z3_COURSE" Type="Int32" />
+          <Property Name="Z4_COURSE" Type="Int32" />
+          <Property Name="Z5_COURSE" Type="Int32" />
+          <Property Name="NINER" Type="Int32" />
+          <Property Name="F_OR_B1" Type="Int32" />
+          <Property Name="F_OR_B2" Type="Int32" />
+          <Property Name="F_OR_B3" Type="Int32" />
+          <Property Name="F_OR_B4" Type="Int32" />
+          <Property Name="F_OR_B5" Type="Int32" />
+          <Property Name="MULT_COURSE" Type="Int32" />
+          <Property Name="RND_ROBIN" Type="Int32" />
+          <Property Name="SENT_UP" Type="Int32" />
+          <Property Name="QUOTABASE" Type="Int32" />
+          <Property Name="TMCAP_PCENT" Type="Int32" />
+          <Property Name="NOTE_WALKERS" Type="Int32" />
+          <Property Name="TR_OR_RND" Type="Int32" />
+          <Property Name="FLIGHTS" Type="Int32" />
+          <Property Name="RAT_ADJ" Type="Int32" />
+          <Property Name="SKIN_SPAN_TEE" Type="Int32" />
+          <Property Name="R6_FORMAT" Type="Int32" />
+          <Property Name="R6_COURSE" Type="Int32" />
+          <Property Name="X6_COURSE" Type="Int32" />
+          <Property Name="Y6_COURSE" Type="Int32" />
+          <Property Name="Z6_COURSE" Type="Int32" />
+          <Property Name="F_OR_B6" Type="Int32" />
+          <Property Name="JUNK" Type="Int32" />
+          <Property Name="FBNINES" Type="Int32" />
+          <Property Name="TRUNKDOLL" Type="Int32" />
+          <Property Name="ROUNDDOLL" Type="Int32" />
+          <Property Name="SPONSOR" Type="Int32" />
+          <Property Name="RP_RESULTS" Type="Int32" />
+          <Property Name="TM_JUNK" Type="Int32" />
+          <Property Name="POST_SCORES" Type="Int32" />
+          <Property Name="LEAGRND" Type="Int32" />
+          <Property Name="LEAGTEEBOX" Type="Int32" />
+          <Property Name="HDCP_PCT_W" Type="Int32" />
+          <Property Name="AVG_HDCP" Type="Int32" />
+          <Property Name="CAPOFFLOW" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FACILITY">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="FACILID" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FACILID" Type="Int32" Nullable="false" />
+          <Property Name="NAME1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NAME2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="PHONE1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PHONE2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ANNUALPYMNTTIME" Type="DateTime" Precision="3" />
+          <Property Name="CC_HOLDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CC_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CC_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LOGO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="BLIP1" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="BLIP2" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FLIGHT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="FLIGHT1" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="FLIGHT1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FORMAT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+            <PropertyRef Name="RNDNO" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="TOURN_NO" Type="Int32" Nullable="false" />
+          <Property Name="RNDNO" Type="Int32" Nullable="false" />
+          <Property Name="HOLE1" Type="Int32" />
+          <Property Name="HOLE2" Type="Int32" />
+          <Property Name="HOLE3" Type="Int32" />
+          <Property Name="HOLE4" Type="Int32" />
+          <Property Name="HOLE5" Type="Int32" />
+          <Property Name="HOLE6" Type="Int32" />
+          <Property Name="HOLE7" Type="Int32" />
+          <Property Name="HOLE8" Type="Int32" />
+          <Property Name="HOLE9" Type="Int32" />
+          <Property Name="HOLE10" Type="Int32" />
+          <Property Name="HOLE11" Type="Int32" />
+          <Property Name="HOLE12" Type="Int32" />
+          <Property Name="HOLE13" Type="Int32" />
+          <Property Name="HOLE14" Type="Int32" />
+          <Property Name="HOLE15" Type="Int32" />
+          <Property Name="HOLE16" Type="Int32" />
+          <Property Name="HOLE17" Type="Int32" />
+          <Property Name="HOLE18" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HDCP">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYERID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="RNDNO" />
+            <PropertyRef Name="LEAGUE" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYERID" Type="Int32" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="RNDNO" Type="Int32" Nullable="false" />
+          <Property Name="LEAGUE" Type="Int32" Nullable="false" />
+          <Property Name="GRS_SCORE" Type="Int32" />
+          <Property Name="ADJ_SCORE" Type="Int32" />
+          <Property Name="CRS_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CRS_RATING" Type="Double" />
+          <Property Name="CRS_SLOPE" Type="Int32" />
+          <Property Name="DIFFERENTIAL" Type="Double" />
+          <Property Name="HIDEIT" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LEAGPARAM">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ROUND" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ROUND" Type="Int32" Nullable="false" />
+          <Property Name="POINTS" Type="Int32" />
+          <Property Name="EXTRAS" Type="Int32" />
+          <Property Name="MEDAL" Type="Int32" />
+          <Property Name="ABCPOINTS" Type="Int32" />
+          <Property Name="ABCEXTRAS" Type="Int32" />
+          <Property Name="ABCNET" Type="Int32" />
+          <Property Name="ABCOFFLOW" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LEAGUE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MFORMAT" Type="Int32" />
+          <Property Name="LASTRND" Type="Int32" />
+          <Property Name="PPT" Type="Int32" />
+          <Property Name="DIVS" Type="Int32" />
+          <Property Name="TPD" Type="Int32" />
+          <Property Name="KEEP_LAST" Type="Int32" />
+          <Property Name="HI_THROW" Type="Int32" />
+          <Property Name="LO_THROW" Type="Int32" />
+          <Property Name="RNDS" Type="Int32" />
+          <Property Name="R1" Type="Int32" />
+          <Property Name="R2" Type="Int32" />
+          <Property Name="R3" Type="Int32" />
+          <Property Name="R4" Type="Int32" />
+          <Property Name="R5" Type="Int32" />
+          <Property Name="R6" Type="Int32" />
+          <Property Name="R7" Type="Int32" />
+          <Property Name="R8" Type="Int32" />
+          <Property Name="R9" Type="Int32" />
+          <Property Name="R10" Type="Int32" />
+          <Property Name="R11" Type="Int32" />
+          <Property Name="R12" Type="Int32" />
+          <Property Name="R13" Type="Int32" />
+          <Property Name="R14" Type="Int32" />
+          <Property Name="R15" Type="Int32" />
+          <Property Name="R16" Type="Int32" />
+          <Property Name="R17" Type="Int32" />
+          <Property Name="R18" Type="Int32" />
+          <Property Name="R19" Type="Int32" />
+          <Property Name="R20" Type="Int32" />
+          <Property Name="R21" Type="Int32" />
+          <Property Name="R22" Type="Int32" />
+          <Property Name="R23" Type="Int32" />
+          <Property Name="R24" Type="Int32" />
+          <Property Name="COURSEID" Type="Int32" />
+          <Property Name="NINEHOLE" Type="Int32" />
+          <Property Name="FORMAT" Type="Int32" />
+          <Property Name="POINTS" Type="Int32" />
+          <Property Name="EXTRAS" Type="Int32" />
+          <Property Name="MEDAL" Type="Int32" />
+          <Property Name="POINTFMT" Type="Int32" />
+          <Property Name="DIVISIONS" Type="Int32" />
+          <Property Name="NUMTEAMS" Type="Int32" />
+          <Property Name="ABCPOINTS" Type="Int32" />
+          <Property Name="ABCEXTRAS" Type="Int32" />
+          <Property Name="ABCNET" Type="Int32" />
+          <Property Name="ABCOFFLOW" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LGSCORE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="LEAGUE" />
+            <PropertyRef Name="RNDNO" />
+            <PropertyRef Name="PLYERID" />
+            <PropertyRef Name="NET" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LEAGUE" Type="Int32" Nullable="false" />
+          <Property Name="RNDNO" Type="Int32" Nullable="false" />
+          <Property Name="PLYERID" Type="Int32" Nullable="false" />
+          <Property Name="NET" Type="Int32" Nullable="false" />
+          <Property Name="T0_CP" Type="Int32" />
+          <Property Name="T0_TM" Type="Int32" />
+          <Property Name="ZNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="H_1" Type="Int32" />
+          <Property Name="H_2" Type="Int32" />
+          <Property Name="H_3" Type="Int32" />
+          <Property Name="H_4" Type="Int32" />
+          <Property Name="H_5" Type="Int32" />
+          <Property Name="H_6" Type="Int32" />
+          <Property Name="H_7" Type="Int32" />
+          <Property Name="H_8" Type="Int32" />
+          <Property Name="H_9" Type="Int32" />
+          <Property Name="H_10" Type="Int32" />
+          <Property Name="H_11" Type="Int32" />
+          <Property Name="H_12" Type="Int32" />
+          <Property Name="H_13" Type="Int32" />
+          <Property Name="H_14" Type="Int32" />
+          <Property Name="H_15" Type="Int32" />
+          <Property Name="H_16" Type="Int32" />
+          <Property Name="H_17" Type="Int32" />
+          <Property Name="H_18" Type="Int32" />
+          <Property Name="H_19" Type="Int32" />
+          <Property Name="H_20" Type="Int32" />
+          <Property Name="H_21" Type="Int32" />
+          <Property Name="H_22" Type="Int32" />
+          <Property Name="H_23" Type="Int32" />
+          <Property Name="H_24" Type="Int32" />
+          <Property Name="C_IND" Type="Int32" />
+          <Property Name="C_TM" Type="Int32" />
+          <Property Name="TEEORDER" Type="Int32" />
+          <Property Name="ORGORDER" Type="Int32" />
+          <Property Name="ORD1" Type="Int32" />
+          <Property Name="ORD2" Type="Int32" />
+          <Property Name="ORD3" Type="Int32" />
+          <Property Name="ORD4" Type="Int32" />
+          <Property Name="ORD5" Type="Int32" />
+          <Property Name="ORD6" Type="Int32" />
+          <Property Name="ORD7" Type="Int32" />
+          <Property Name="ORD8" Type="Int32" />
+          <Property Name="ORD9" Type="Int32" />
+          <Property Name="ORD10" Type="Int32" />
+          <Property Name="ORD11" Type="Int32" />
+          <Property Name="ORD12" Type="Int32" />
+          <Property Name="ORD13" Type="Int32" />
+          <Property Name="ORD14" Type="Int32" />
+          <Property Name="ORD15" Type="Int32" />
+          <Property Name="ORD16" Type="Int32" />
+          <Property Name="ORD17" Type="Int32" />
+          <Property Name="ORD18" Type="Int32" />
+          <Property Name="ORD19" Type="Int32" />
+          <Property Name="ORD20" Type="Int32" />
+          <Property Name="ORD21" Type="Int32" />
+          <Property Name="ORD22" Type="Int32" />
+          <Property Name="ORD23" Type="Int32" />
+          <Property Name="ORD24" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MEMBERSHIP">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PID" Type="Int32" Nullable="false" />
+          <Property Name="MAINADMIN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="COADMIN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PAYMENT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="PYMNT_NO" Type="Int32" />
+          <Property Name="PYMNT_TIME" Type="DateTime" Precision="3" />
+          <Property Name="AMT_PAID_100" Type="Int32" />
+          <Property Name="NO_ROUNDS" Type="Int32" />
+          <Property Name="RND_ROBIN" Type="Int32" />
+          <Property Name="USERID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="NO_SEC_EVENTS" Type="Int32" />
+          <Property Name="AMT_PAID" Type="Double" />
+          <Property Name="CC_TYPE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CC_LAST_4" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="CC_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EV_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="NO_WEEKS" Type="Int32" />
+          <Property Name="START_TIME" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PLAYER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="MEMBER" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="HDCP" Type="Double" />
+          <Property Name="GENDER" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PNAME" Type="String" MaxLength="42" FixedLength="false" Unicode="false" />
+          <Property Name="USGATAG" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DELETED" Type="Int32" />
+          <Property Name="FEMALE" Type="Int32" />
+          <Property Name="HANDLE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="REGISTRY">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="FACILID" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FACILID" Type="Int32" Nullable="false" />
+          <Property Name="EVENTIDX" Type="Int32" />
+          <Property Name="GAMEIDX" Type="Int32" />
+          <Property Name="LEAGIDX" Type="Int32" />
+          <Property Name="BASEPAY" Type="Int32" />
+          <Property Name="CARDTYPE" Type="Int32" />
+          <Property Name="DISPROUND" Type="Int32" />
+          <Property Name="DISPBLOWS" Type="Int32" />
+          <Property Name="TEAMHDCP" Type="Int32" />
+          <Property Name="BOARDLINES" Type="Int32" />
+          <Property Name="SCORED1" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="SCORED2" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="SCORED3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SCORED4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXPIRETEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LMARGIN" Type="Int32" />
+          <Property Name="TMARGIN" Type="Int32" />
+          <Property Name="SBLABELS" Type="Int32" />
+          <Property Name="BGCOLOR" Type="Int32" />
+          <Property Name="BSIZE1" Type="Int32" />
+          <Property Name="BSIZE2" Type="Int32" />
+          <Property Name="BSIZE3" Type="Int32" />
+          <Property Name="BSIZE4" Type="Int32" />
+          <Property Name="BSIZE5" Type="Int32" />
+          <Property Name="BORIENT1" Type="Int32" />
+          <Property Name="BORIENT2" Type="Int32" />
+          <Property Name="BORIENT3" Type="Int32" />
+          <Property Name="BORIENT4" Type="Int32" />
+          <Property Name="BORIENT5" Type="Int32" />
+          <Property Name="BPAGE1" Type="Int32" />
+          <Property Name="BPAGE2" Type="Int32" />
+          <Property Name="BPAGE3" Type="Int32" />
+          <Property Name="BPAGE4" Type="Int32" />
+          <Property Name="BPAGE5" Type="Int32" />
+          <Property Name="BCOLOR" Type="Int32" />
+          <Property Name="BNCOLOR" Type="Int32" />
+          <Property Name="BNSIZE" Type="Int32" />
+          <Property Name="BSTYLE" Type="Int32" />
+          <Property Name="BNSTYLE" Type="Int32" />
+          <Property Name="BFONT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BNFONT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BNHEIGHT" Type="Int32" />
+          <Property Name="GAPTIME" Type="Int32" />
+          <Property Name="DEMOCOUNT" Type="Int32" />
+          <Property Name="D9" Type="Int32" />
+          <Property Name="D18" Type="Int32" />
+          <Property Name="AUTODELETE" Type="Int32" />
+          <Property Name="AUTODAYS" Type="Int32" />
+          <Property Name="CERTNO" Type="Int32" />
+          <Property Name="TIEBREAK" Type="Int32" />
+          <Property Name="WHICHCAP" Type="Int32" />
+          <Property Name="ROUNDROB" Type="Int32" />
+          <Property Name="MATCHPLAY" Type="Int32" />
+          <Property Name="QUOTABASE" Type="Int32" />
+          <Property Name="KEEP_LAST" Type="Int32" />
+          <Property Name="HI_THROW" Type="Int32" />
+          <Property Name="LO_THROW" Type="Int32" />
+          <Property Name="QUAD_B" Type="Int32" />
+          <Property Name="TRIP_B" Type="Int32" />
+          <Property Name="DBL_B" Type="Int32" />
+          <Property Name="BOGIE" Type="Int32" />
+          <Property Name="PAR" Type="Int32" />
+          <Property Name="BIRDIE" Type="Int32" />
+          <Property Name="EAGLE" Type="Int32" />
+          <Property Name="D_EAGLE" Type="Int32" />
+          <Property Name="FORCE_LNF" Type="Int32" />
+          <Property Name="PROXY_URL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="PROXY_PORT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PROXY_USERID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PROXY_PWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PROXY_USE" Type="Int32" />
+          <Property Name="TIME_CONNECTED_SERV" Type="DateTime" Precision="3" />
+          <Property Name="TIME_CONNECTED_COMP" Type="DateTime" Precision="3" />
+          <Property Name="LAST_RUN_TIME_COMP" Type="DateTime" Precision="3" />
+          <Property Name="RUN_COUNT_UNCONNECTED" Type="Int32" />
+          <Property Name="LAST_ANNUALFEE" Type="Int32" />
+          <Property Name="LAST_WEEKFEE" Type="Int32" />
+          <Property Name="SPONSOR_IDX" Type="Int32" />
+          <Property Name="R1TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R2TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R3TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R4TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R5TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R6TEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEECOLOR" Type="Int32" />
+          <Property Name="LBP1COLOR" Type="Int32" />
+          <Property Name="LBP2COLOR" Type="Int32" />
+          <Property Name="LBFONT1COLOR" Type="Int32" />
+          <Property Name="LBFONT2COLOR" Type="Int32" />
+          <Property Name="LBFONTSIZE" Type="Int32" />
+          <Property Name="LBFONTSTYLE" Type="Int32" />
+          <Property Name="LBFONTNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LBIPAUSE" Type="Int32" />
+          <Property Name="LBSSPEEDM" Type="Int32" />
+          <Property Name="LBSSPEED" Type="Int32" />
+          <Property Name="REPORTDIR" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="LBOARDDIR" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="REMOVED">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+            <PropertyRef Name="PLYERID" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="TOURN_NO" Type="Int32" Nullable="false" />
+          <Property Name="PLYERID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESULT">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="TOURN_NO" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="TOURN_NO" Type="Int32" Nullable="false" />
+          <Property Name="PURSE" Type="Int32" />
+          <Property Name="NAME" Type="String" MaxLength="99" FixedLength="false" Unicode="false" />
+          <Property Name="COUNTIT" Type="Int32" />
+          <Property Name="PLACES" Type="Int32" />
+          <Property Name="RNDS_FIN" Type="Int32" />
+          <Property Name="NO_OF_RNDS" Type="Int32" />
+          <Property Name="PPT" Type="Int32" />
+          <Property Name="ST_RND" Type="Int32" />
+          <Property Name="THERND" Type="Int32" />
+          <Property Name="NETPURSE" Type="Int32" />
+          <Property Name="R1" Type="Int32" />
+          <Property Name="R2" Type="Int32" />
+          <Property Name="R3" Type="Int32" />
+          <Property Name="R4" Type="Int32" />
+          <Property Name="R5" Type="Int32" />
+          <Property Name="NETSKINS" Type="Int32" />
+          <Property Name="GRSSKINS" Type="Int32" />
+          <Property Name="P1" Type="Double" />
+          <Property Name="P2" Type="Double" />
+          <Property Name="P3" Type="Double" />
+          <Property Name="P4" Type="Double" />
+          <Property Name="P5" Type="Double" />
+          <Property Name="P6" Type="Double" />
+          <Property Name="P7" Type="Double" />
+          <Property Name="P8" Type="Double" />
+          <Property Name="P9" Type="Double" />
+          <Property Name="P10" Type="Double" />
+          <Property Name="P11" Type="Double" />
+          <Property Name="P12" Type="Double" />
+          <Property Name="P13" Type="Double" />
+          <Property Name="P14" Type="Double" />
+          <Property Name="P15" Type="Double" />
+          <Property Name="P16" Type="Double" />
+          <Property Name="P17" Type="Double" />
+          <Property Name="P18" Type="Double" />
+          <Property Name="P19" Type="Double" />
+          <Property Name="P20" Type="Double" />
+          <Property Name="P21" Type="Double" />
+          <Property Name="P22" Type="Double" />
+          <Property Name="CUSTOMPAY" Type="Int32" />
+          <Property Name="BASEPAY" Type="Int32" />
+          <Property Name="GPURSE_R1" Type="Int32" />
+          <Property Name="GPURSE_R2" Type="Int32" />
+          <Property Name="GPURSE_R3" Type="Int32" />
+          <Property Name="GPURSE_R4" Type="Int32" />
+          <Property Name="GPURSE_R5" Type="Int32" />
+          <Property Name="NPURSE_R1" Type="Int32" />
+          <Property Name="NPURSE_R2" Type="Int32" />
+          <Property Name="NPURSE_R3" Type="Int32" />
+          <Property Name="NPURSE_R4" Type="Int32" />
+          <Property Name="NPURSE_R5" Type="Int32" />
+          <Property Name="GPURSE_R6" Type="Int32" />
+          <Property Name="NPURSE_R6" Type="Int32" />
+          <Property Name="R6" Type="Int32" />
+          <Property Name="C1" Type="Int32" />
+          <Property Name="C2" Type="Int32" />
+          <Property Name="C3" Type="Int32" />
+          <Property Name="C4" Type="Int32" />
+          <Property Name="C1_GPURSE_R1" Type="Int32" />
+          <Property Name="C1_NPURSE_R1" Type="Int32" />
+          <Property Name="C2_GPURSE_R1" Type="Int32" />
+          <Property Name="C2_NPURSE_R1" Type="Int32" />
+          <Property Name="C3_GPURSE_R1" Type="Int32" />
+          <Property Name="C3_NPURSE_R1" Type="Int32" />
+          <Property Name="C4_GPURSE_R1" Type="Int32" />
+          <Property Name="C4_NPURSE_R1" Type="Int32" />
+          <Property Name="C1_GPURSE_R2" Type="Int32" />
+          <Property Name="C1_NPURSE_R2" Type="Int32" />
+          <Property Name="C2_GPURSE_R2" Type="Int32" />
+          <Property Name="C2_NPURSE_R2" Type="Int32" />
+          <Property Name="C3_GPURSE_R2" Type="Int32" />
+          <Property Name="C3_NPURSE_R2" Type="Int32" />
+          <Property Name="C4_GPURSE_R2" Type="Int32" />
+          <Property Name="C4_NPURSE_R2" Type="Int32" />
+          <Property Name="C1_GPURSE_R3" Type="Int32" />
+          <Property Name="C1_NPURSE_R3" Type="Int32" />
+          <Property Name="C2_GPURSE_R3" Type="Int32" />
+          <Property Name="C2_NPURSE_R3" Type="Int32" />
+          <Property Name="C3_GPURSE_R3" Type="Int32" />
+          <Property Name="C3_NPURSE_R3" Type="Int32" />
+          <Property Name="C4_GPURSE_R3" Type="Int32" />
+          <Property Name="C4_NPURSE_R3" Type="Int32" />
+          <Property Name="C1_GPURSE_R4" Type="Int32" />
+          <Property Name="C1_NPURSE_R4" Type="Int32" />
+          <Property Name="C2_GPURSE_R4" Type="Int32" />
+          <Property Name="C2_NPURSE_R4" Type="Int32" />
+          <Property Name="C3_GPURSE_R4" Type="Int32" />
+          <Property Name="C3_NPURSE_R4" Type="Int32" />
+          <Property Name="C4_GPURSE_R4" Type="Int32" />
+          <Property Name="C4_NPURSE_R4" Type="Int32" />
+          <Property Name="C1_GPURSE_R5" Type="Int32" />
+          <Property Name="C1_NPURSE_R5" Type="Int32" />
+          <Property Name="C2_GPURSE_R5" Type="Int32" />
+          <Property Name="C2_NPURSE_R5" Type="Int32" />
+          <Property Name="C3_GPURSE_R5" Type="Int32" />
+          <Property Name="C3_NPURSE_R5" Type="Int32" />
+          <Property Name="C4_GPURSE_R5" Type="Int32" />
+          <Property Name="C4_NPURSE_R5" Type="Int32" />
+          <Property Name="C1_GPURSE_R6" Type="Int32" />
+          <Property Name="C1_NPURSE_R6" Type="Int32" />
+          <Property Name="C2_GPURSE_R6" Type="Int32" />
+          <Property Name="C2_NPURSE_R6" Type="Int32" />
+          <Property Name="C3_GPURSE_R6" Type="Int32" />
+          <Property Name="C3_NPURSE_R6" Type="Int32" />
+          <Property Name="C4_GPURSE_R6" Type="Int32" />
+          <Property Name="C4_NPURSE_R6" Type="Int32" />
+          <Property Name="JUNK_SKINS" Type="Int32" />
+          <Property Name="J1_PURSE" Type="Int32" />
+          <Property Name="J2_PURSE" Type="Int32" />
+          <Property Name="J3_PURSE" Type="Int32" />
+          <Property Name="J4_PURSE" Type="Int32" />
+          <Property Name="J5_PURSE" Type="Int32" />
+          <Property Name="J6_PURSE" Type="Int32" />
+          <Property Name="J1_COUNT" Type="Int32" />
+          <Property Name="J2_COUNT" Type="Int32" />
+          <Property Name="J3_COUNT" Type="Int32" />
+          <Property Name="J4_COUNT" Type="Int32" />
+          <Property Name="J5_COUNT" Type="Int32" />
+          <Property Name="J6_COUNT" Type="Int32" />
+          <Property Name="JNET_SKINS" Type="Int32" />
+          <Property Name="FLIGHTED_SKINS" Type="Int32" />
+          <Property Name="LEADER_B" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SCORE">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="RNDNO" />
+            <PropertyRef Name="PLYERID" />
+            <PropertyRef Name="NET" />
+            <PropertyRef Name="T0_TM" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="RNDNO" Type="Int32" Nullable="false" />
+          <Property Name="PLYERID" Type="Int32" Nullable="false" />
+          <Property Name="CAPDEX" Type="Double" />
+          <Property Name="HDCP" Type="Int32" />
+          <Property Name="NET" Type="Int32" Nullable="false" />
+          <Property Name="THE_FLIGHT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="T0_CP" Type="Int32" />
+          <Property Name="T1_CP" Type="Int32" />
+          <Property Name="T2_CP" Type="Int32" />
+          <Property Name="T3_CP" Type="Int32" />
+          <Property Name="T4_CP" Type="Int32" />
+          <Property Name="T5_CP" Type="Int32" />
+          <Property Name="T6_CP" Type="Int32" />
+          <Property Name="T7_CP" Type="Int32" />
+          <Property Name="T8_CP" Type="Int32" />
+          <Property Name="T0_TM" Type="Int32" Nullable="false" />
+          <Property Name="T1_TM" Type="Int32" />
+          <Property Name="T2_TM" Type="Int32" />
+          <Property Name="T3_TM" Type="Int32" />
+          <Property Name="T4_TM" Type="Int32" />
+          <Property Name="T5_TM" Type="Int32" />
+          <Property Name="T6_TM" Type="Int32" />
+          <Property Name="T7_TM" Type="Int32" />
+          <Property Name="T8_TM" Type="Int32" />
+          <Property Name="SK_R1" Type="Int32" />
+          <Property Name="SK_N1" Type="Int32" />
+          <Property Name="SK_R2" Type="Int32" />
+          <Property Name="SK_R3" Type="Int32" />
+          <Property Name="SK_R4" Type="Int32" />
+          <Property Name="SK_R5" Type="Int32" />
+          <Property Name="H_1" Type="Int32" />
+          <Property Name="H_2" Type="Int32" />
+          <Property Name="H_3" Type="Int32" />
+          <Property Name="H_4" Type="Int32" />
+          <Property Name="H_5" Type="Int32" />
+          <Property Name="H_6" Type="Int32" />
+          <Property Name="H_7" Type="Int32" />
+          <Property Name="H_8" Type="Int32" />
+          <Property Name="H_9" Type="Int32" />
+          <Property Name="H_10" Type="Int32" />
+          <Property Name="H_11" Type="Int32" />
+          <Property Name="H_12" Type="Int32" />
+          <Property Name="H_13" Type="Int32" />
+          <Property Name="H_14" Type="Int32" />
+          <Property Name="H_15" Type="Int32" />
+          <Property Name="H_16" Type="Int32" />
+          <Property Name="H_17" Type="Int32" />
+          <Property Name="H_18" Type="Int32" />
+          <Property Name="H_IN" Type="Int32" />
+          <Property Name="H_OUT" Type="Int32" />
+          <Property Name="H_TOT" Type="Int32" />
+          <Property Name="H_IN_6" Type="Int32" />
+          <Property Name="H_IN_3" Type="Int32" />
+          <Property Name="H_OUT_6" Type="Int32" />
+          <Property Name="H_OUT_3" Type="Int32" />
+          <Property Name="ADJ_SCORE" Type="Int32" />
+          <Property Name="C0TOT" Type="Int32" />
+          <Property Name="C1TOT" Type="Int32" />
+          <Property Name="C2TOT" Type="Int32" />
+          <Property Name="C3TOT" Type="Int32" />
+          <Property Name="C4TOT" Type="Int32" />
+          <Property Name="C5TOT" Type="Int32" />
+          <Property Name="C6TOT" Type="Int32" />
+          <Property Name="C7TOT" Type="Int32" />
+          <Property Name="C8TOT" Type="Int32" />
+          <Property Name="CH_TOT" Type="Int32" />
+          <Property Name="TEEORDER" Type="Int32" />
+          <Property Name="ORGORDER" Type="Int32" />
+          <Property Name="FLIGHT" Type="Int32" />
+          <Property Name="CX0" Type="Int32" />
+          <Property Name="CX1" Type="Int32" />
+          <Property Name="CX2" Type="Int32" />
+          <Property Name="CX3" Type="Int32" />
+          <Property Name="CX4" Type="Int32" />
+          <Property Name="CX5" Type="Int32" />
+          <Property Name="CX6" Type="Int32" />
+          <Property Name="CX7" Type="Int32" />
+          <Property Name="CX8" Type="Int32" />
+          <Property Name="DUMMY" Type="Int32" />
+          <Property Name="ZNAME" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="FX0" Type="Int32" />
+          <Property Name="FX1" Type="Int32" />
+          <Property Name="FX2" Type="Int32" />
+          <Property Name="FX3" Type="Int32" />
+          <Property Name="FX4" Type="Int32" />
+          <Property Name="FX5" Type="Int32" />
+          <Property Name="FX6" Type="Int32" />
+          <Property Name="FX7" Type="Int32" />
+          <Property Name="FX8" Type="Int32" />
+          <Property Name="BX0" Type="Int32" />
+          <Property Name="BX1" Type="Int32" />
+          <Property Name="BX2" Type="Int32" />
+          <Property Name="BX3" Type="Int32" />
+          <Property Name="BX4" Type="Int32" />
+          <Property Name="BX5" Type="Int32" />
+          <Property Name="BX6" Type="Int32" />
+          <Property Name="BX7" Type="Int32" />
+          <Property Name="BX8" Type="Int32" />
+          <Property Name="WALKER" Type="Int32" />
+          <Property Name="COURSE_GRP" Type="Int32" />
+          <Property Name="JUNK" Type="Int32" />
+          <Property Name="RPTHRU" Type="Int32" />
+          <Property Name="RP_TOT" Type="Int32" />
+          <Property Name="RP0TOT" Type="Int32" />
+          <Property Name="RP1TOT" Type="Int32" />
+          <Property Name="RP2TOT" Type="Int32" />
+          <Property Name="RP3TOT" Type="Int32" />
+          <Property Name="RP4TOT" Type="Int32" />
+          <Property Name="RP5TOT" Type="Int32" />
+          <Property Name="RP6TOT" Type="Int32" />
+          <Property Name="RP7TOT" Type="Int32" />
+          <Property Name="RP8TOT" Type="Int32" />
+          <Property Name="RPX0" Type="Int32" />
+          <Property Name="RPX1" Type="Int32" />
+          <Property Name="RPX2" Type="Int32" />
+          <Property Name="RPX3" Type="Int32" />
+          <Property Name="RPX4" Type="Int32" />
+          <Property Name="RPX5" Type="Int32" />
+          <Property Name="RPX6" Type="Int32" />
+          <Property Name="RPX7" Type="Int32" />
+          <Property Name="RPX8" Type="Int32" />
+          <Property Name="RP_FX0" Type="Int32" />
+          <Property Name="RP_FX1" Type="Int32" />
+          <Property Name="RP_FX2" Type="Int32" />
+          <Property Name="RP_FX3" Type="Int32" />
+          <Property Name="RP_FX4" Type="Int32" />
+          <Property Name="RP_FX5" Type="Int32" />
+          <Property Name="RP_FX6" Type="Int32" />
+          <Property Name="RP_FX7" Type="Int32" />
+          <Property Name="RP_FX8" Type="Int32" />
+          <Property Name="RP_BX0" Type="Int32" />
+          <Property Name="RP_BX1" Type="Int32" />
+          <Property Name="RP_BX2" Type="Int32" />
+          <Property Name="RP_BX3" Type="Int32" />
+          <Property Name="RP_BX4" Type="Int32" />
+          <Property Name="RP_BX5" Type="Int32" />
+          <Property Name="RP_BX6" Type="Int32" />
+          <Property Name="RP_BX7" Type="Int32" />
+          <Property Name="RP_BX8" Type="Int32" />
+          <Property Name="RP_OUT" Type="Int32" />
+          <Property Name="RP_OUT_3" Type="Int32" />
+          <Property Name="RP_OUT_6" Type="Int32" />
+          <Property Name="RP_IN" Type="Int32" />
+          <Property Name="RP_IN_3" Type="Int32" />
+          <Property Name="RP_IN_6" Type="Int32" />
+          <Property Name="T0_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T0_CALPRICE" Type="Int32" />
+          <Property Name="T1_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T1_CALPRICE" Type="Int32" />
+          <Property Name="T2_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T2_CALPRICE" Type="Int32" />
+          <Property Name="T3_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T3_CALPRICE" Type="Int32" />
+          <Property Name="T4_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T4_CALPRICE" Type="Int32" />
+          <Property Name="T5_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T5_CALPRICE" Type="Int32" />
+          <Property Name="T6_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T6_CALPRICE" Type="Int32" />
+          <Property Name="T7_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T7_CALPRICE" Type="Int32" />
+          <Property Name="T8_CALOWNER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="T8_CALPRICE" Type="Int32" />
+          <Property Name="FEMALE" Type="Int32" />
+          <Property Name="MATCHORD" Type="Int32" />
+          <Property Name="T0_MT" Type="Int32" />
+          <Property Name="XINDEX" Type="Double" />
+        </EntityType>
+        <EntityType Name="TEETIME">
+          <Key>
+            <PropertyRef Name="FACID" />
+            <PropertyRef Name="PLYFLD" />
+            <PropertyRef Name="PLYFLDNO" />
+            <PropertyRef Name="RNDNO" />
+          </Key>
+          <Property Name="FACID" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PLYFLD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PLYFLDNO" Type="Int32" Nullable="false" />
+          <Property Name="RNDNO" Type="Int32" Nullable="false" />
+          <Property Name="COURSE" Type="Int32" />
+          <Property Name="STARTTIME" Type="DateTime" Precision="3" />
+          <Property Name="STARTTIME2" Type="DateTime" Precision="3" />
+          <Property Name="STARTTIME3" Type="DateTime" Precision="3" />
+          <Property Name="STARTTIME4" Type="DateTime" Precision="3" />
+          <Property Name="GAPMINUTES" Type="Int32" />
+          <Property Name="GAP2" Type="Int32" />
+          <Property Name="GAP3" Type="Int32" />
+          <Property Name="GAP4" Type="Int32" />
+          <Property Name="STARTHOLE" Type="Int32" />
+          <Property Name="STARTHOLE2" Type="Int32" />
+          <Property Name="STARTHOLE3" Type="Int32" />
+          <Property Name="STARTHOLE4" Type="Int32" />
+          <Property Name="STARTGROUP" Type="Int32" />
+          <Property Name="DIRECTION" Type="Int32" />
+          <Property Name="SHOTGUN" Type="Int32" />
+          <Property Name="TWOTIMES" Type="Int32" />
+          <Property Name="THREETIMES" Type="Int32" />
+          <Property Name="FOURTIMES" Type="Int32" />
+          <Property Name="ONECOUNT" Type="Int32" />
+          <Property Name="TWOCOUNT" Type="Int32" />
+          <Property Name="THREECNT" Type="Int32" />
+          <Property Name="XSOME" Type="Int32" />
+          <Property Name="PPCART" Type="Int32" />
+          <Property Name="PPTEAM" Type="Int32" />
+          <Property Name="HOLE1" Type="Int32" />
+          <Property Name="HOLE2" Type="Int32" />
+          <Property Name="HOLE3" Type="Int32" />
+          <Property Name="HOLE4" Type="Int32" />
+          <Property Name="HOLE5" Type="Int32" />
+          <Property Name="HOLE6" Type="Int32" />
+          <Property Name="HOLE7" Type="Int32" />
+          <Property Name="HOLE8" Type="Int32" />
+          <Property Name="HOLE9" Type="Int32" />
+          <Property Name="HOLE10" Type="Int32" />
+          <Property Name="HOLE11" Type="Int32" />
+          <Property Name="HOLE12" Type="Int32" />
+          <Property Name="HOLE13" Type="Int32" />
+          <Property Name="HOLE14" Type="Int32" />
+          <Property Name="HOLE15" Type="Int32" />
+          <Property Name="HOLE16" Type="Int32" />
+          <Property Name="HOLE17" Type="Int32" />
+          <Property Name="HOLE18" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="TGLFEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACCNTs" EntityType="Self.ACCNT" />
+          <EntitySet Name="CARDs" EntityType="Self.CARD" />
+          <EntitySet Name="COURSEs" EntityType="Self.COURSE" />
+          <EntitySet Name="ENTRies" EntityType="Self.ENTRY" />
+          <EntitySet Name="EVENTs" EntityType="Self.EVENT" />
+          <EntitySet Name="FACILITies" EntityType="Self.FACILITY" />
+          <EntitySet Name="FLIGHTS" EntityType="Self.FLIGHT" />
+          <EntitySet Name="FORMATs" EntityType="Self.FORMAT" />
+          <EntitySet Name="HDCPs" EntityType="Self.HDCP" />
+          <EntitySet Name="LEAGPARAMS" EntityType="Self.LEAGPARAM" />
+          <EntitySet Name="LEAGUEs" EntityType="Self.LEAGUE" />
+          <EntitySet Name="LGSCOREs" EntityType="Self.LGSCORE" />
+          <EntitySet Name="MEMBERSHIPs" EntityType="Self.MEMBERSHIP" />
+          <EntitySet Name="PAYMENTS" EntityType="Self.PAYMENT" />
+          <EntitySet Name="PLAYERS" EntityType="Self.PLAYER" />
+          <EntitySet Name="REGISTRies" EntityType="Self.REGISTRY" />
+          <EntitySet Name="REMOVEDs" EntityType="Self.REMOVED" />
+          <EntitySet Name="RESULTS" EntityType="Self.RESULT" />
+          <EntitySet Name="SCORES" EntityType="Self.SCORE" />
+          <EntitySet Name="TEETIMEs" EntityType="Self.TEETIME" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TGLFModelStoreContainer" CdmEntityContainer="TGLFEntities">
+          <EntitySetMapping Name="ACCNTs">
+            <EntityTypeMapping TypeName="TGLFModel.ACCNT">
+              <MappingFragment StoreEntitySet="ACCNT">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="UNAME" ColumnName="UNAME" />
+                <ScalarProperty Name="ADD1" ColumnName="ADD1" />
+                <ScalarProperty Name="ADD2" ColumnName="ADD2" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="EMAIL_ADD" ColumnName="EMAIL_ADD" />
+                <ScalarProperty Name="ANNUALPYMNTEXPIRED" ColumnName="ANNUALPYMNTEXPIRED" />
+                <ScalarProperty Name="CC_HOLDER" ColumnName="CC_HOLDER" />
+                <ScalarProperty Name="CC_NM" ColumnName="CC_NM" />
+                <ScalarProperty Name="MACADDRESS" ColumnName="MACADDRESS" />
+                <ScalarProperty Name="REFERREDBY" ColumnName="REFERREDBY" />
+                <ScalarProperty Name="REGTIME" ColumnName="REGTIME" />
+                <ScalarProperty Name="LASTPAY100" ColumnName="LASTPAY100" />
+                <ScalarProperty Name="PAYPERIOD" ColumnName="PAYPERIOD" />
+                <ScalarProperty Name="LASTPAYTIME" ColumnName="LASTPAYTIME" />
+                <ScalarProperty Name="CC_TYPE" ColumnName="CC_TYPE" />
+                <ScalarProperty Name="CC_FOUR" ColumnName="CC_FOUR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARDs">
+            <EntityTypeMapping TypeName="TGLFModel.CARD">
+              <MappingFragment StoreEntitySet="CARD">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="CARDTYPE" ColumnName="CARDTYPE" />
+                <ScalarProperty Name="CARD1" ColumnName="CARD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSEs">
+            <EntityTypeMapping TypeName="TGLFModel.COURSE">
+              <MappingFragment StoreEntitySet="COURSE">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CAP1" ColumnName="CAP1" />
+                <ScalarProperty Name="CAP2" ColumnName="CAP2" />
+                <ScalarProperty Name="CAP3" ColumnName="CAP3" />
+                <ScalarProperty Name="CAP4" ColumnName="CAP4" />
+                <ScalarProperty Name="CAP5" ColumnName="CAP5" />
+                <ScalarProperty Name="CAP6" ColumnName="CAP6" />
+                <ScalarProperty Name="CAP7" ColumnName="CAP7" />
+                <ScalarProperty Name="CAP8" ColumnName="CAP8" />
+                <ScalarProperty Name="CAP9" ColumnName="CAP9" />
+                <ScalarProperty Name="CAP10" ColumnName="CAP10" />
+                <ScalarProperty Name="CAP11" ColumnName="CAP11" />
+                <ScalarProperty Name="CAP12" ColumnName="CAP12" />
+                <ScalarProperty Name="CAP13" ColumnName="CAP13" />
+                <ScalarProperty Name="CAP14" ColumnName="CAP14" />
+                <ScalarProperty Name="CAP15" ColumnName="CAP15" />
+                <ScalarProperty Name="CAP16" ColumnName="CAP16" />
+                <ScalarProperty Name="CAP17" ColumnName="CAP17" />
+                <ScalarProperty Name="CAP18" ColumnName="CAP18" />
+                <ScalarProperty Name="PAR1" ColumnName="PAR1" />
+                <ScalarProperty Name="PAR2" ColumnName="PAR2" />
+                <ScalarProperty Name="PAR3" ColumnName="PAR3" />
+                <ScalarProperty Name="PAR4" ColumnName="PAR4" />
+                <ScalarProperty Name="PAR5" ColumnName="PAR5" />
+                <ScalarProperty Name="PAR6" ColumnName="PAR6" />
+                <ScalarProperty Name="PAR7" ColumnName="PAR7" />
+                <ScalarProperty Name="PAR8" ColumnName="PAR8" />
+                <ScalarProperty Name="PAR9" ColumnName="PAR9" />
+                <ScalarProperty Name="PAR10" ColumnName="PAR10" />
+                <ScalarProperty Name="PAR11" ColumnName="PAR11" />
+                <ScalarProperty Name="PAR12" ColumnName="PAR12" />
+                <ScalarProperty Name="PAR13" ColumnName="PAR13" />
+                <ScalarProperty Name="PAR14" ColumnName="PAR14" />
+                <ScalarProperty Name="PAR15" ColumnName="PAR15" />
+                <ScalarProperty Name="PAR16" ColumnName="PAR16" />
+                <ScalarProperty Name="PAR17" ColumnName="PAR17" />
+                <ScalarProperty Name="PAR18" ColumnName="PAR18" />
+                <ScalarProperty Name="YDG1" ColumnName="YDG1" />
+                <ScalarProperty Name="YDG2" ColumnName="YDG2" />
+                <ScalarProperty Name="YDG3" ColumnName="YDG3" />
+                <ScalarProperty Name="YDG4" ColumnName="YDG4" />
+                <ScalarProperty Name="YDG5" ColumnName="YDG5" />
+                <ScalarProperty Name="YDG6" ColumnName="YDG6" />
+                <ScalarProperty Name="YDG7" ColumnName="YDG7" />
+                <ScalarProperty Name="YDG8" ColumnName="YDG8" />
+                <ScalarProperty Name="YDG9" ColumnName="YDG9" />
+                <ScalarProperty Name="YDG10" ColumnName="YDG10" />
+                <ScalarProperty Name="YDG11" ColumnName="YDG11" />
+                <ScalarProperty Name="YDG12" ColumnName="YDG12" />
+                <ScalarProperty Name="YDG13" ColumnName="YDG13" />
+                <ScalarProperty Name="YDG14" ColumnName="YDG14" />
+                <ScalarProperty Name="YDG15" ColumnName="YDG15" />
+                <ScalarProperty Name="YDG16" ColumnName="YDG16" />
+                <ScalarProperty Name="YDG17" ColumnName="YDG17" />
+                <ScalarProperty Name="YDG18" ColumnName="YDG18" />
+                <ScalarProperty Name="RATING" ColumnName="RATING" />
+                <ScalarProperty Name="SLOPE" ColumnName="SLOPE" />
+                <ScalarProperty Name="DELETED" ColumnName="DELETED" />
+                <ScalarProperty Name="GREENSIZE" ColumnName="GREENSIZE" />
+                <ScalarProperty Name="WD1" ColumnName="WD1" />
+                <ScalarProperty Name="WD2" ColumnName="WD2" />
+                <ScalarProperty Name="WD3" ColumnName="WD3" />
+                <ScalarProperty Name="WD4" ColumnName="WD4" />
+                <ScalarProperty Name="WD5" ColumnName="WD5" />
+                <ScalarProperty Name="WD6" ColumnName="WD6" />
+                <ScalarProperty Name="WD7" ColumnName="WD7" />
+                <ScalarProperty Name="WD8" ColumnName="WD8" />
+                <ScalarProperty Name="WD9" ColumnName="WD9" />
+                <ScalarProperty Name="WD10" ColumnName="WD10" />
+                <ScalarProperty Name="WD11" ColumnName="WD11" />
+                <ScalarProperty Name="WD12" ColumnName="WD12" />
+                <ScalarProperty Name="WD13" ColumnName="WD13" />
+                <ScalarProperty Name="WD14" ColumnName="WD14" />
+                <ScalarProperty Name="WD15" ColumnName="WD15" />
+                <ScalarProperty Name="WD16" ColumnName="WD16" />
+                <ScalarProperty Name="WD17" ColumnName="WD17" />
+                <ScalarProperty Name="WD18" ColumnName="WD18" />
+                <ScalarProperty Name="DP1" ColumnName="DP1" />
+                <ScalarProperty Name="DP2" ColumnName="DP2" />
+                <ScalarProperty Name="DP3" ColumnName="DP3" />
+                <ScalarProperty Name="DP4" ColumnName="DP4" />
+                <ScalarProperty Name="DP5" ColumnName="DP5" />
+                <ScalarProperty Name="DP6" ColumnName="DP6" />
+                <ScalarProperty Name="DP7" ColumnName="DP7" />
+                <ScalarProperty Name="DP8" ColumnName="DP8" />
+                <ScalarProperty Name="DP9" ColumnName="DP9" />
+                <ScalarProperty Name="DP10" ColumnName="DP10" />
+                <ScalarProperty Name="DP11" ColumnName="DP11" />
+                <ScalarProperty Name="DP12" ColumnName="DP12" />
+                <ScalarProperty Name="DP13" ColumnName="DP13" />
+                <ScalarProperty Name="DP14" ColumnName="DP14" />
+                <ScalarProperty Name="DP15" ColumnName="DP15" />
+                <ScalarProperty Name="DP16" ColumnName="DP16" />
+                <ScalarProperty Name="DP17" ColumnName="DP17" />
+                <ScalarProperty Name="DP18" ColumnName="DP18" />
+                <ScalarProperty Name="LR1" ColumnName="LR1" />
+                <ScalarProperty Name="LR2" ColumnName="LR2" />
+                <ScalarProperty Name="LR3" ColumnName="LR3" />
+                <ScalarProperty Name="LR4" ColumnName="LR4" />
+                <ScalarProperty Name="LR5" ColumnName="LR5" />
+                <ScalarProperty Name="LR6" ColumnName="LR6" />
+                <ScalarProperty Name="LR7" ColumnName="LR7" />
+                <ScalarProperty Name="LR8" ColumnName="LR8" />
+                <ScalarProperty Name="LR9" ColumnName="LR9" />
+                <ScalarProperty Name="LR10" ColumnName="LR10" />
+                <ScalarProperty Name="LR11" ColumnName="LR11" />
+                <ScalarProperty Name="LR12" ColumnName="LR12" />
+                <ScalarProperty Name="LR13" ColumnName="LR13" />
+                <ScalarProperty Name="LR14" ColumnName="LR14" />
+                <ScalarProperty Name="LR15" ColumnName="LR15" />
+                <ScalarProperty Name="LR16" ColumnName="LR16" />
+                <ScalarProperty Name="LR17" ColumnName="LR17" />
+                <ScalarProperty Name="LR18" ColumnName="LR18" />
+                <ScalarProperty Name="FB1" ColumnName="FB1" />
+                <ScalarProperty Name="FB2" ColumnName="FB2" />
+                <ScalarProperty Name="FB3" ColumnName="FB3" />
+                <ScalarProperty Name="FB4" ColumnName="FB4" />
+                <ScalarProperty Name="FB5" ColumnName="FB5" />
+                <ScalarProperty Name="FB6" ColumnName="FB6" />
+                <ScalarProperty Name="FB7" ColumnName="FB7" />
+                <ScalarProperty Name="FB8" ColumnName="FB8" />
+                <ScalarProperty Name="FB9" ColumnName="FB9" />
+                <ScalarProperty Name="FB10" ColumnName="FB10" />
+                <ScalarProperty Name="FB11" ColumnName="FB11" />
+                <ScalarProperty Name="FB12" ColumnName="FB12" />
+                <ScalarProperty Name="FB13" ColumnName="FB13" />
+                <ScalarProperty Name="FB14" ColumnName="FB14" />
+                <ScalarProperty Name="FB15" ColumnName="FB15" />
+                <ScalarProperty Name="FB16" ColumnName="FB16" />
+                <ScalarProperty Name="FB17" ColumnName="FB17" />
+                <ScalarProperty Name="FB18" ColumnName="FB18" />
+                <ScalarProperty Name="YARDAGE" ColumnName="YARDAGE" />
+                <ScalarProperty Name="TEECOLOR" ColumnName="TEECOLOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ENTRies">
+            <EntityTypeMapping TypeName="TGLFModel.ENTRY">
+              <MappingFragment StoreEntitySet="ENTRY">
+                <ScalarProperty Name="PLYERID" ColumnName="PLYERID" />
+                <ScalarProperty Name="H_1" ColumnName="H_1" />
+                <ScalarProperty Name="H_2" ColumnName="H_2" />
+                <ScalarProperty Name="H_3" ColumnName="H_3" />
+                <ScalarProperty Name="H_4" ColumnName="H_4" />
+                <ScalarProperty Name="H_5" ColumnName="H_5" />
+                <ScalarProperty Name="H_6" ColumnName="H_6" />
+                <ScalarProperty Name="H_7" ColumnName="H_7" />
+                <ScalarProperty Name="H_8" ColumnName="H_8" />
+                <ScalarProperty Name="H_9" ColumnName="H_9" />
+                <ScalarProperty Name="H_10" ColumnName="H_10" />
+                <ScalarProperty Name="H_11" ColumnName="H_11" />
+                <ScalarProperty Name="H_12" ColumnName="H_12" />
+                <ScalarProperty Name="H_13" ColumnName="H_13" />
+                <ScalarProperty Name="H_14" ColumnName="H_14" />
+                <ScalarProperty Name="H_15" ColumnName="H_15" />
+                <ScalarProperty Name="H_16" ColumnName="H_16" />
+                <ScalarProperty Name="H_17" ColumnName="H_17" />
+                <ScalarProperty Name="H_18" ColumnName="H_18" />
+                <ScalarProperty Name="H_19" ColumnName="H_19" />
+                <ScalarProperty Name="FRONT" ColumnName="FRONT" />
+                <ScalarProperty Name="BACK" ColumnName="BACK" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="ADJ_SCORE" ColumnName="ADJ_SCORE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EVENTs">
+            <EntityTypeMapping TypeName="TGLFModel.EVENT">
+              <MappingFragment StoreEntitySet="EVENT">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="TOURN_NO" ColumnName="TOURN_NO" />
+                <ScalarProperty Name="PLYERS_PER_TM" ColumnName="PLYERS_PER_TM" />
+                <ScalarProperty Name="NO_ROUNDS" ColumnName="NO_ROUNDS" />
+                <ScalarProperty Name="START_ROUND" ColumnName="START_ROUND" />
+                <ScalarProperty Name="R1_FORMAT" ColumnName="R1_FORMAT" />
+                <ScalarProperty Name="R2_FORMAT" ColumnName="R2_FORMAT" />
+                <ScalarProperty Name="R3_FORMAT" ColumnName="R3_FORMAT" />
+                <ScalarProperty Name="R4_FORMAT" ColumnName="R4_FORMAT" />
+                <ScalarProperty Name="R5_FORMAT" ColumnName="R5_FORMAT" />
+                <ScalarProperty Name="R1_COURSE" ColumnName="R1_COURSE" />
+                <ScalarProperty Name="R2_COURSE" ColumnName="R2_COURSE" />
+                <ScalarProperty Name="R3_COURSE" ColumnName="R3_COURSE" />
+                <ScalarProperty Name="R4_COURSE" ColumnName="R4_COURSE" />
+                <ScalarProperty Name="R5_COURSE" ColumnName="R5_COURSE" />
+                <ScalarProperty Name="SKINS" ColumnName="SKINS" />
+                <ScalarProperty Name="NETSKINS" ColumnName="NETSKINS" />
+                <ScalarProperty Name="HDCP_PCT" ColumnName="HDCP_PCT" />
+                <ScalarProperty Name="IND_NET" ColumnName="IND_NET" />
+                <ScalarProperty Name="BLIND" ColumnName="BLIND" />
+                <ScalarProperty Name="IND_GRS" ColumnName="IND_GRS" />
+                <ScalarProperty Name="HDCP_TYP" ColumnName="HDCP_TYP" />
+                <ScalarProperty Name="GM_NAME" ColumnName="GM_NAME" />
+                <ScalarProperty Name="EV_NAME" ColumnName="EV_NAME" />
+                <ScalarProperty Name="TM_SKINS" ColumnName="TM_SKINS" />
+                <ScalarProperty Name="LEAGUE" ColumnName="LEAGUE" />
+                <ScalarProperty Name="X1_COURSE" ColumnName="X1_COURSE" />
+                <ScalarProperty Name="X2_COURSE" ColumnName="X2_COURSE" />
+                <ScalarProperty Name="X3_COURSE" ColumnName="X3_COURSE" />
+                <ScalarProperty Name="X4_COURSE" ColumnName="X4_COURSE" />
+                <ScalarProperty Name="X5_COURSE" ColumnName="X5_COURSE" />
+                <ScalarProperty Name="Y1_COURSE" ColumnName="Y1_COURSE" />
+                <ScalarProperty Name="Y2_COURSE" ColumnName="Y2_COURSE" />
+                <ScalarProperty Name="Y3_COURSE" ColumnName="Y3_COURSE" />
+                <ScalarProperty Name="Y4_COURSE" ColumnName="Y4_COURSE" />
+                <ScalarProperty Name="Y5_COURSE" ColumnName="Y5_COURSE" />
+                <ScalarProperty Name="Z1_COURSE" ColumnName="Z1_COURSE" />
+                <ScalarProperty Name="Z2_COURSE" ColumnName="Z2_COURSE" />
+                <ScalarProperty Name="Z3_COURSE" ColumnName="Z3_COURSE" />
+                <ScalarProperty Name="Z4_COURSE" ColumnName="Z4_COURSE" />
+                <ScalarProperty Name="Z5_COURSE" ColumnName="Z5_COURSE" />
+                <ScalarProperty Name="NINER" ColumnName="NINER" />
+                <ScalarProperty Name="F_OR_B1" ColumnName="F_OR_B1" />
+                <ScalarProperty Name="F_OR_B2" ColumnName="F_OR_B2" />
+                <ScalarProperty Name="F_OR_B3" ColumnName="F_OR_B3" />
+                <ScalarProperty Name="F_OR_B4" ColumnName="F_OR_B4" />
+                <ScalarProperty Name="F_OR_B5" ColumnName="F_OR_B5" />
+                <ScalarProperty Name="MULT_COURSE" ColumnName="MULT_COURSE" />
+                <ScalarProperty Name="RND_ROBIN" ColumnName="RND_ROBIN" />
+                <ScalarProperty Name="SENT_UP" ColumnName="SENT_UP" />
+                <ScalarProperty Name="QUOTABASE" ColumnName="QUOTABASE" />
+                <ScalarProperty Name="TMCAP_PCENT" ColumnName="TMCAP_PCENT" />
+                <ScalarProperty Name="NOTE_WALKERS" ColumnName="NOTE_WALKERS" />
+                <ScalarProperty Name="TR_OR_RND" ColumnName="TR_OR_RND" />
+                <ScalarProperty Name="FLIGHTS" ColumnName="FLIGHTS" />
+                <ScalarProperty Name="RAT_ADJ" ColumnName="RAT_ADJ" />
+                <ScalarProperty Name="SKIN_SPAN_TEE" ColumnName="SKIN_SPAN_TEE" />
+                <ScalarProperty Name="R6_FORMAT" ColumnName="R6_FORMAT" />
+                <ScalarProperty Name="R6_COURSE" ColumnName="R6_COURSE" />
+                <ScalarProperty Name="X6_COURSE" ColumnName="X6_COURSE" />
+                <ScalarProperty Name="Y6_COURSE" ColumnName="Y6_COURSE" />
+                <ScalarProperty Name="Z6_COURSE" ColumnName="Z6_COURSE" />
+                <ScalarProperty Name="F_OR_B6" ColumnName="F_OR_B6" />
+                <ScalarProperty Name="JUNK" ColumnName="JUNK" />
+                <ScalarProperty Name="FBNINES" ColumnName="FBNINES" />
+                <ScalarProperty Name="TRUNKDOLL" ColumnName="TRUNKDOLL" />
+                <ScalarProperty Name="ROUNDDOLL" ColumnName="ROUNDDOLL" />
+                <ScalarProperty Name="SPONSOR" ColumnName="SPONSOR" />
+                <ScalarProperty Name="RP_RESULTS" ColumnName="RP_RESULTS" />
+                <ScalarProperty Name="TM_JUNK" ColumnName="TM_JUNK" />
+                <ScalarProperty Name="POST_SCORES" ColumnName="POST_SCORES" />
+                <ScalarProperty Name="LEAGRND" ColumnName="LEAGRND" />
+                <ScalarProperty Name="LEAGTEEBOX" ColumnName="LEAGTEEBOX" />
+                <ScalarProperty Name="HDCP_PCT_W" ColumnName="HDCP_PCT_W" />
+                <ScalarProperty Name="AVG_HDCP" ColumnName="AVG_HDCP" />
+                <ScalarProperty Name="CAPOFFLOW" ColumnName="CAPOFFLOW" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACILITies">
+            <EntityTypeMapping TypeName="TGLFModel.FACILITY">
+              <MappingFragment StoreEntitySet="FACILITY">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="FACILID" ColumnName="FACILID" />
+                <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+                <ScalarProperty Name="NAME2" ColumnName="NAME2" />
+                <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+                <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="PHONE1" ColumnName="PHONE1" />
+                <ScalarProperty Name="PHONE2" ColumnName="PHONE2" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="EMAIL1" ColumnName="EMAIL1" />
+                <ScalarProperty Name="EMAIL2" ColumnName="EMAIL2" />
+                <ScalarProperty Name="ANNUALPYMNTTIME" ColumnName="ANNUALPYMNTTIME" />
+                <ScalarProperty Name="CC_HOLDER" ColumnName="CC_HOLDER" />
+                <ScalarProperty Name="CC_TYPE" ColumnName="CC_TYPE" />
+                <ScalarProperty Name="CC_NO" ColumnName="CC_NO" />
+                <ScalarProperty Name="LOGO" ColumnName="LOGO" />
+                <ScalarProperty Name="BLIP1" ColumnName="BLIP1" />
+                <ScalarProperty Name="BLIP2" ColumnName="BLIP2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FLIGHTS">
+            <EntityTypeMapping TypeName="TGLFModel.FLIGHT">
+              <MappingFragment StoreEntitySet="FLIGHTS">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="FLIGHT1" ColumnName="FLIGHT" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FORMATs">
+            <EntityTypeMapping TypeName="TGLFModel.FORMAT">
+              <MappingFragment StoreEntitySet="FORMAT">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="TOURN_NO" ColumnName="TOURN_NO" />
+                <ScalarProperty Name="RNDNO" ColumnName="RNDNO" />
+                <ScalarProperty Name="HOLE1" ColumnName="HOLE1" />
+                <ScalarProperty Name="HOLE2" ColumnName="HOLE2" />
+                <ScalarProperty Name="HOLE3" ColumnName="HOLE3" />
+                <ScalarProperty Name="HOLE4" ColumnName="HOLE4" />
+                <ScalarProperty Name="HOLE5" ColumnName="HOLE5" />
+                <ScalarProperty Name="HOLE6" ColumnName="HOLE6" />
+                <ScalarProperty Name="HOLE7" ColumnName="HOLE7" />
+                <ScalarProperty Name="HOLE8" ColumnName="HOLE8" />
+                <ScalarProperty Name="HOLE9" ColumnName="HOLE9" />
+                <ScalarProperty Name="HOLE10" ColumnName="HOLE10" />
+                <ScalarProperty Name="HOLE11" ColumnName="HOLE11" />
+                <ScalarProperty Name="HOLE12" ColumnName="HOLE12" />
+                <ScalarProperty Name="HOLE13" ColumnName="HOLE13" />
+                <ScalarProperty Name="HOLE14" ColumnName="HOLE14" />
+                <ScalarProperty Name="HOLE15" ColumnName="HOLE15" />
+                <ScalarProperty Name="HOLE16" ColumnName="HOLE16" />
+                <ScalarProperty Name="HOLE17" ColumnName="HOLE17" />
+                <ScalarProperty Name="HOLE18" ColumnName="HOLE18" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDCPs">
+            <EntityTypeMapping TypeName="TGLFModel.HDCP">
+              <MappingFragment StoreEntitySet="HDCP">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYERID" ColumnName="PLYERID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="RNDNO" ColumnName="RNDNO" />
+                <ScalarProperty Name="LEAGUE" ColumnName="LEAGUE" />
+                <ScalarProperty Name="GRS_SCORE" ColumnName="GRS_SCORE" />
+                <ScalarProperty Name="ADJ_SCORE" ColumnName="ADJ_SCORE" />
+                <ScalarProperty Name="CRS_NAME" ColumnName="CRS_NAME" />
+                <ScalarProperty Name="CRS_RATING" ColumnName="CRS_RATING" />
+                <ScalarProperty Name="CRS_SLOPE" ColumnName="CRS_SLOPE" />
+                <ScalarProperty Name="DIFFERENTIAL" ColumnName="DIFFERENTIAL" />
+                <ScalarProperty Name="HIDEIT" ColumnName="HIDEIT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LEAGPARAMS">
+            <EntityTypeMapping TypeName="TGLFModel.LEAGPARAM">
+              <MappingFragment StoreEntitySet="LEAGPARAMS">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ROUND" ColumnName="ROUND" />
+                <ScalarProperty Name="POINTS" ColumnName="POINTS" />
+                <ScalarProperty Name="EXTRAS" ColumnName="EXTRAS" />
+                <ScalarProperty Name="MEDAL" ColumnName="MEDAL" />
+                <ScalarProperty Name="ABCPOINTS" ColumnName="ABCPOINTS" />
+                <ScalarProperty Name="ABCEXTRAS" ColumnName="ABCEXTRAS" />
+                <ScalarProperty Name="ABCNET" ColumnName="ABCNET" />
+                <ScalarProperty Name="ABCOFFLOW" ColumnName="ABCOFFLOW" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LEAGUEs">
+            <EntityTypeMapping TypeName="TGLFModel.LEAGUE">
+              <MappingFragment StoreEntitySet="LEAGUE">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="MFORMAT" ColumnName="MFORMAT" />
+                <ScalarProperty Name="LASTRND" ColumnName="LASTRND" />
+                <ScalarProperty Name="PPT" ColumnName="PPT" />
+                <ScalarProperty Name="DIVS" ColumnName="DIVS" />
+                <ScalarProperty Name="TPD" ColumnName="TPD" />
+                <ScalarProperty Name="KEEP_LAST" ColumnName="KEEP_LAST" />
+                <ScalarProperty Name="HI_THROW" ColumnName="HI_THROW" />
+                <ScalarProperty Name="LO_THROW" ColumnName="LO_THROW" />
+                <ScalarProperty Name="RNDS" ColumnName="RNDS" />
+                <ScalarProperty Name="R1" ColumnName="R1" />
+                <ScalarProperty Name="R2" ColumnName="R2" />
+                <ScalarProperty Name="R3" ColumnName="R3" />
+                <ScalarProperty Name="R4" ColumnName="R4" />
+                <ScalarProperty Name="R5" ColumnName="R5" />
+                <ScalarProperty Name="R6" ColumnName="R6" />
+                <ScalarProperty Name="R7" ColumnName="R7" />
+                <ScalarProperty Name="R8" ColumnName="R8" />
+                <ScalarProperty Name="R9" ColumnName="R9" />
+                <ScalarProperty Name="R10" ColumnName="R10" />
+                <ScalarProperty Name="R11" ColumnName="R11" />
+                <ScalarProperty Name="R12" ColumnName="R12" />
+                <ScalarProperty Name="R13" ColumnName="R13" />
+                <ScalarProperty Name="R14" ColumnName="R14" />
+                <ScalarProperty Name="R15" ColumnName="R15" />
+                <ScalarProperty Name="R16" ColumnName="R16" />
+                <ScalarProperty Name="R17" ColumnName="R17" />
+                <ScalarProperty Name="R18" ColumnName="R18" />
+                <ScalarProperty Name="R19" ColumnName="R19" />
+                <ScalarProperty Name="R20" ColumnName="R20" />
+                <ScalarProperty Name="R21" ColumnName="R21" />
+                <ScalarProperty Name="R22" ColumnName="R22" />
+                <ScalarProperty Name="R23" ColumnName="R23" />
+                <ScalarProperty Name="R24" ColumnName="R24" />
+                <ScalarProperty Name="COURSEID" ColumnName="COURSEID" />
+                <ScalarProperty Name="NINEHOLE" ColumnName="NINEHOLE" />
+                <ScalarProperty Name="FORMAT" ColumnName="FORMAT" />
+                <ScalarProperty Name="POINTS" ColumnName="POINTS" />
+                <ScalarProperty Name="EXTRAS" ColumnName="EXTRAS" />
+                <ScalarProperty Name="MEDAL" ColumnName="MEDAL" />
+                <ScalarProperty Name="POINTFMT" ColumnName="POINTFMT" />
+                <ScalarProperty Name="DIVISIONS" ColumnName="DIVISIONS" />
+                <ScalarProperty Name="NUMTEAMS" ColumnName="NUMTEAMS" />
+                <ScalarProperty Name="ABCPOINTS" ColumnName="ABCPOINTS" />
+                <ScalarProperty Name="ABCEXTRAS" ColumnName="ABCEXTRAS" />
+                <ScalarProperty Name="ABCNET" ColumnName="ABCNET" />
+                <ScalarProperty Name="ABCOFFLOW" ColumnName="ABCOFFLOW" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LGSCOREs">
+            <EntityTypeMapping TypeName="TGLFModel.LGSCORE">
+              <MappingFragment StoreEntitySet="LGSCORE">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="LEAGUE" ColumnName="LEAGUE" />
+                <ScalarProperty Name="RNDNO" ColumnName="RNDNO" />
+                <ScalarProperty Name="PLYERID" ColumnName="PLYERID" />
+                <ScalarProperty Name="NET" ColumnName="NET" />
+                <ScalarProperty Name="T0_CP" ColumnName="T0_CP" />
+                <ScalarProperty Name="T0_TM" ColumnName="T0_TM" />
+                <ScalarProperty Name="ZNAME" ColumnName="ZNAME" />
+                <ScalarProperty Name="H_1" ColumnName="H_1" />
+                <ScalarProperty Name="H_2" ColumnName="H_2" />
+                <ScalarProperty Name="H_3" ColumnName="H_3" />
+                <ScalarProperty Name="H_4" ColumnName="H_4" />
+                <ScalarProperty Name="H_5" ColumnName="H_5" />
+                <ScalarProperty Name="H_6" ColumnName="H_6" />
+                <ScalarProperty Name="H_7" ColumnName="H_7" />
+                <ScalarProperty Name="H_8" ColumnName="H_8" />
+                <ScalarProperty Name="H_9" ColumnName="H_9" />
+                <ScalarProperty Name="H_10" ColumnName="H_10" />
+                <ScalarProperty Name="H_11" ColumnName="H_11" />
+                <ScalarProperty Name="H_12" ColumnName="H_12" />
+                <ScalarProperty Name="H_13" ColumnName="H_13" />
+                <ScalarProperty Name="H_14" ColumnName="H_14" />
+                <ScalarProperty Name="H_15" ColumnName="H_15" />
+                <ScalarProperty Name="H_16" ColumnName="H_16" />
+                <ScalarProperty Name="H_17" ColumnName="H_17" />
+                <ScalarProperty Name="H_18" ColumnName="H_18" />
+                <ScalarProperty Name="H_19" ColumnName="H_19" />
+                <ScalarProperty Name="H_20" ColumnName="H_20" />
+                <ScalarProperty Name="H_21" ColumnName="H_21" />
+                <ScalarProperty Name="H_22" ColumnName="H_22" />
+                <ScalarProperty Name="H_23" ColumnName="H_23" />
+                <ScalarProperty Name="H_24" ColumnName="H_24" />
+                <ScalarProperty Name="C_IND" ColumnName="C_IND" />
+                <ScalarProperty Name="C_TM" ColumnName="C_TM" />
+                <ScalarProperty Name="TEEORDER" ColumnName="TEEORDER" />
+                <ScalarProperty Name="ORGORDER" ColumnName="ORGORDER" />
+                <ScalarProperty Name="ORD1" ColumnName="ORD1" />
+                <ScalarProperty Name="ORD2" ColumnName="ORD2" />
+                <ScalarProperty Name="ORD3" ColumnName="ORD3" />
+                <ScalarProperty Name="ORD4" ColumnName="ORD4" />
+                <ScalarProperty Name="ORD5" ColumnName="ORD5" />
+                <ScalarProperty Name="ORD6" ColumnName="ORD6" />
+                <ScalarProperty Name="ORD7" ColumnName="ORD7" />
+                <ScalarProperty Name="ORD8" ColumnName="ORD8" />
+                <ScalarProperty Name="ORD9" ColumnName="ORD9" />
+                <ScalarProperty Name="ORD10" ColumnName="ORD10" />
+                <ScalarProperty Name="ORD11" ColumnName="ORD11" />
+                <ScalarProperty Name="ORD12" ColumnName="ORD12" />
+                <ScalarProperty Name="ORD13" ColumnName="ORD13" />
+                <ScalarProperty Name="ORD14" ColumnName="ORD14" />
+                <ScalarProperty Name="ORD15" ColumnName="ORD15" />
+                <ScalarProperty Name="ORD16" ColumnName="ORD16" />
+                <ScalarProperty Name="ORD17" ColumnName="ORD17" />
+                <ScalarProperty Name="ORD18" ColumnName="ORD18" />
+                <ScalarProperty Name="ORD19" ColumnName="ORD19" />
+                <ScalarProperty Name="ORD20" ColumnName="ORD20" />
+                <ScalarProperty Name="ORD21" ColumnName="ORD21" />
+                <ScalarProperty Name="ORD22" ColumnName="ORD22" />
+                <ScalarProperty Name="ORD23" ColumnName="ORD23" />
+                <ScalarProperty Name="ORD24" ColumnName="ORD24" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MEMBERSHIPs">
+            <EntityTypeMapping TypeName="TGLFModel.MEMBERSHIP">
+              <MappingFragment StoreEntitySet="MEMBERSHIP">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="MAINADMIN" ColumnName="MAINADMIN" />
+                <ScalarProperty Name="COADMIN" ColumnName="COADMIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAYMENTS">
+            <EntityTypeMapping TypeName="TGLFModel.PAYMENT">
+              <MappingFragment StoreEntitySet="PAYMENTS">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="PYMNT_NO" ColumnName="PYMNT_NO" />
+                <ScalarProperty Name="PYMNT_TIME" ColumnName="PYMNT_TIME" />
+                <ScalarProperty Name="AMT_PAID_100" ColumnName="AMT_PAID_100" />
+                <ScalarProperty Name="NO_ROUNDS" ColumnName="NO_ROUNDS" />
+                <ScalarProperty Name="RND_ROBIN" ColumnName="RND_ROBIN" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="NO_SEC_EVENTS" ColumnName="NO_SEC_EVENTS" />
+                <ScalarProperty Name="AMT_PAID" ColumnName="AMT_PAID" />
+                <ScalarProperty Name="CC_TYPE" ColumnName="CC_TYPE" />
+                <ScalarProperty Name="CC_LAST_4" ColumnName="CC_LAST_4" />
+                <ScalarProperty Name="CC_NO" ColumnName="CC_NO" />
+                <ScalarProperty Name="EV_NAME" ColumnName="EV_NAME" />
+                <ScalarProperty Name="NO_WEEKS" ColumnName="NO_WEEKS" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLAYERS">
+            <EntityTypeMapping TypeName="TGLFModel.PLAYER">
+              <MappingFragment StoreEntitySet="PLAYERS">
+                <ScalarProperty Name="MEMBER" ColumnName="MEMBER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HDCP" ColumnName="HDCP" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="FNAME" ColumnName="FNAME" />
+                <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+                <ScalarProperty Name="PNAME" ColumnName="PNAME" />
+                <ScalarProperty Name="USGATAG" ColumnName="USGATAG" />
+                <ScalarProperty Name="DELETED" ColumnName="DELETED" />
+                <ScalarProperty Name="FEMALE" ColumnName="FEMALE" />
+                <ScalarProperty Name="HANDLE" ColumnName="HANDLE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTRies">
+            <EntityTypeMapping TypeName="TGLFModel.REGISTRY">
+              <MappingFragment StoreEntitySet="REGISTRY">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="FACILID" ColumnName="FACILID" />
+                <ScalarProperty Name="EVENTIDX" ColumnName="EVENTIDX" />
+                <ScalarProperty Name="GAMEIDX" ColumnName="GAMEIDX" />
+                <ScalarProperty Name="LEAGIDX" ColumnName="LEAGIDX" />
+                <ScalarProperty Name="BASEPAY" ColumnName="BASEPAY" />
+                <ScalarProperty Name="CARDTYPE" ColumnName="CARDTYPE" />
+                <ScalarProperty Name="DISPROUND" ColumnName="DISPROUND" />
+                <ScalarProperty Name="DISPBLOWS" ColumnName="DISPBLOWS" />
+                <ScalarProperty Name="TEAMHDCP" ColumnName="TEAMHDCP" />
+                <ScalarProperty Name="BOARDLINES" ColumnName="BOARDLINES" />
+                <ScalarProperty Name="SCORED1" ColumnName="SCORED1" />
+                <ScalarProperty Name="SCORED2" ColumnName="SCORED2" />
+                <ScalarProperty Name="SCORED3" ColumnName="SCORED3" />
+                <ScalarProperty Name="SCORED4" ColumnName="SCORED4" />
+                <ScalarProperty Name="EXPIRETEXT" ColumnName="EXPIRETEXT" />
+                <ScalarProperty Name="LMARGIN" ColumnName="LMARGIN" />
+                <ScalarProperty Name="TMARGIN" ColumnName="TMARGIN" />
+                <ScalarProperty Name="SBLABELS" ColumnName="SBLABELS" />
+                <ScalarProperty Name="BGCOLOR" ColumnName="BGCOLOR" />
+                <ScalarProperty Name="BSIZE1" ColumnName="BSIZE1" />
+                <ScalarProperty Name="BSIZE2" ColumnName="BSIZE2" />
+                <ScalarProperty Name="BSIZE3" ColumnName="BSIZE3" />
+                <ScalarProperty Name="BSIZE4" ColumnName="BSIZE4" />
+                <ScalarProperty Name="BSIZE5" ColumnName="BSIZE5" />
+                <ScalarProperty Name="BORIENT1" ColumnName="BORIENT1" />
+                <ScalarProperty Name="BORIENT2" ColumnName="BORIENT2" />
+                <ScalarProperty Name="BORIENT3" ColumnName="BORIENT3" />
+                <ScalarProperty Name="BORIENT4" ColumnName="BORIENT4" />
+                <ScalarProperty Name="BORIENT5" ColumnName="BORIENT5" />
+                <ScalarProperty Name="BPAGE1" ColumnName="BPAGE1" />
+                <ScalarProperty Name="BPAGE2" ColumnName="BPAGE2" />
+                <ScalarProperty Name="BPAGE3" ColumnName="BPAGE3" />
+                <ScalarProperty Name="BPAGE4" ColumnName="BPAGE4" />
+                <ScalarProperty Name="BPAGE5" ColumnName="BPAGE5" />
+                <ScalarProperty Name="BCOLOR" ColumnName="BCOLOR" />
+                <ScalarProperty Name="BNCOLOR" ColumnName="BNCOLOR" />
+                <ScalarProperty Name="BNSIZE" ColumnName="BNSIZE" />
+                <ScalarProperty Name="BSTYLE" ColumnName="BSTYLE" />
+                <ScalarProperty Name="BNSTYLE" ColumnName="BNSTYLE" />
+                <ScalarProperty Name="BFONT" ColumnName="BFONT" />
+                <ScalarProperty Name="BNFONT" ColumnName="BNFONT" />
+                <ScalarProperty Name="BNHEIGHT" ColumnName="BNHEIGHT" />
+                <ScalarProperty Name="GAPTIME" ColumnName="GAPTIME" />
+                <ScalarProperty Name="DEMOCOUNT" ColumnName="DEMOCOUNT" />
+                <ScalarProperty Name="D9" ColumnName="D9" />
+                <ScalarProperty Name="D18" ColumnName="D18" />
+                <ScalarProperty Name="AUTODELETE" ColumnName="AUTODELETE" />
+                <ScalarProperty Name="AUTODAYS" ColumnName="AUTODAYS" />
+                <ScalarProperty Name="CERTNO" ColumnName="CERTNO" />
+                <ScalarProperty Name="TIEBREAK" ColumnName="TIEBREAK" />
+                <ScalarProperty Name="WHICHCAP" ColumnName="WHICHCAP" />
+                <ScalarProperty Name="ROUNDROB" ColumnName="ROUNDROB" />
+                <ScalarProperty Name="MATCHPLAY" ColumnName="MATCHPLAY" />
+                <ScalarProperty Name="QUOTABASE" ColumnName="QUOTABASE" />
+                <ScalarProperty Name="KEEP_LAST" ColumnName="KEEP_LAST" />
+                <ScalarProperty Name="HI_THROW" ColumnName="HI_THROW" />
+                <ScalarProperty Name="LO_THROW" ColumnName="LO_THROW" />
+                <ScalarProperty Name="QUAD_B" ColumnName="QUAD_B" />
+                <ScalarProperty Name="TRIP_B" ColumnName="TRIP_B" />
+                <ScalarProperty Name="DBL_B" ColumnName="DBL_B" />
+                <ScalarProperty Name="BOGIE" ColumnName="BOGIE" />
+                <ScalarProperty Name="PAR" ColumnName="PAR" />
+                <ScalarProperty Name="BIRDIE" ColumnName="BIRDIE" />
+                <ScalarProperty Name="EAGLE" ColumnName="EAGLE" />
+                <ScalarProperty Name="D_EAGLE" ColumnName="D_EAGLE" />
+                <ScalarProperty Name="FORCE_LNF" ColumnName="FORCE_LNF" />
+                <ScalarProperty Name="PROXY_URL" ColumnName="PROXY_URL" />
+                <ScalarProperty Name="PROXY_PORT" ColumnName="PROXY_PORT" />
+                <ScalarProperty Name="PROXY_USERID" ColumnName="PROXY_USERID" />
+                <ScalarProperty Name="PROXY_PWORD" ColumnName="PROXY_PWORD" />
+                <ScalarProperty Name="PROXY_USE" ColumnName="PROXY_USE" />
+                <ScalarProperty Name="TIME_CONNECTED_SERV" ColumnName="TIME_CONNECTED_SERV" />
+                <ScalarProperty Name="TIME_CONNECTED_COMP" ColumnName="TIME_CONNECTED_COMP" />
+                <ScalarProperty Name="LAST_RUN_TIME_COMP" ColumnName="LAST_RUN_TIME_COMP" />
+                <ScalarProperty Name="RUN_COUNT_UNCONNECTED" ColumnName="RUN_COUNT_UNCONNECTED" />
+                <ScalarProperty Name="LAST_ANNUALFEE" ColumnName="LAST_ANNUALFEE" />
+                <ScalarProperty Name="LAST_WEEKFEE" ColumnName="LAST_WEEKFEE" />
+                <ScalarProperty Name="SPONSOR_IDX" ColumnName="SPONSOR_IDX" />
+                <ScalarProperty Name="R1TEXT" ColumnName="R1TEXT" />
+                <ScalarProperty Name="R2TEXT" ColumnName="R2TEXT" />
+                <ScalarProperty Name="R3TEXT" ColumnName="R3TEXT" />
+                <ScalarProperty Name="R4TEXT" ColumnName="R4TEXT" />
+                <ScalarProperty Name="R5TEXT" ColumnName="R5TEXT" />
+                <ScalarProperty Name="R6TEXT" ColumnName="R6TEXT" />
+                <ScalarProperty Name="TEECOLOR" ColumnName="TEECOLOR" />
+                <ScalarProperty Name="LBP1COLOR" ColumnName="LBP1COLOR" />
+                <ScalarProperty Name="LBP2COLOR" ColumnName="LBP2COLOR" />
+                <ScalarProperty Name="LBFONT1COLOR" ColumnName="LBFONT1COLOR" />
+                <ScalarProperty Name="LBFONT2COLOR" ColumnName="LBFONT2COLOR" />
+                <ScalarProperty Name="LBFONTSIZE" ColumnName="LBFONTSIZE" />
+                <ScalarProperty Name="LBFONTSTYLE" ColumnName="LBFONTSTYLE" />
+                <ScalarProperty Name="LBFONTNAME" ColumnName="LBFONTNAME" />
+                <ScalarProperty Name="LBIPAUSE" ColumnName="LBIPAUSE" />
+                <ScalarProperty Name="LBSSPEEDM" ColumnName="LBSSPEEDM" />
+                <ScalarProperty Name="LBSSPEED" ColumnName="LBSSPEED" />
+                <ScalarProperty Name="REPORTDIR" ColumnName="REPORTDIR" />
+                <ScalarProperty Name="LBOARDDIR" ColumnName="LBOARDDIR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REMOVEDs">
+            <EntityTypeMapping TypeName="TGLFModel.REMOVED">
+              <MappingFragment StoreEntitySet="REMOVED">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="TOURN_NO" ColumnName="TOURN_NO" />
+                <ScalarProperty Name="PLYERID" ColumnName="PLYERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESULTS">
+            <EntityTypeMapping TypeName="TGLFModel.RESULT">
+              <MappingFragment StoreEntitySet="RESULTS">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="TOURN_NO" ColumnName="TOURN_NO" />
+                <ScalarProperty Name="PURSE" ColumnName="PURSE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="COUNTIT" ColumnName="COUNTIT" />
+                <ScalarProperty Name="PLACES" ColumnName="PLACES" />
+                <ScalarProperty Name="RNDS_FIN" ColumnName="RNDS_FIN" />
+                <ScalarProperty Name="NO_OF_RNDS" ColumnName="NO_OF_RNDS" />
+                <ScalarProperty Name="PPT" ColumnName="PPT" />
+                <ScalarProperty Name="ST_RND" ColumnName="ST_RND" />
+                <ScalarProperty Name="THERND" ColumnName="THERND" />
+                <ScalarProperty Name="NETPURSE" ColumnName="NETPURSE" />
+                <ScalarProperty Name="R1" ColumnName="R1" />
+                <ScalarProperty Name="R2" ColumnName="R2" />
+                <ScalarProperty Name="R3" ColumnName="R3" />
+                <ScalarProperty Name="R4" ColumnName="R4" />
+                <ScalarProperty Name="R5" ColumnName="R5" />
+                <ScalarProperty Name="NETSKINS" ColumnName="NETSKINS" />
+                <ScalarProperty Name="GRSSKINS" ColumnName="GRSSKINS" />
+                <ScalarProperty Name="P1" ColumnName="P1" />
+                <ScalarProperty Name="P2" ColumnName="P2" />
+                <ScalarProperty Name="P3" ColumnName="P3" />
+                <ScalarProperty Name="P4" ColumnName="P4" />
+                <ScalarProperty Name="P5" ColumnName="P5" />
+                <ScalarProperty Name="P6" ColumnName="P6" />
+                <ScalarProperty Name="P7" ColumnName="P7" />
+                <ScalarProperty Name="P8" ColumnName="P8" />
+                <ScalarProperty Name="P9" ColumnName="P9" />
+                <ScalarProperty Name="P10" ColumnName="P10" />
+                <ScalarProperty Name="P11" ColumnName="P11" />
+                <ScalarProperty Name="P12" ColumnName="P12" />
+                <ScalarProperty Name="P13" ColumnName="P13" />
+                <ScalarProperty Name="P14" ColumnName="P14" />
+                <ScalarProperty Name="P15" ColumnName="P15" />
+                <ScalarProperty Name="P16" ColumnName="P16" />
+                <ScalarProperty Name="P17" ColumnName="P17" />
+                <ScalarProperty Name="P18" ColumnName="P18" />
+                <ScalarProperty Name="P19" ColumnName="P19" />
+                <ScalarProperty Name="P20" ColumnName="P20" />
+                <ScalarProperty Name="P21" ColumnName="P21" />
+                <ScalarProperty Name="P22" ColumnName="P22" />
+                <ScalarProperty Name="CUSTOMPAY" ColumnName="CUSTOMPAY" />
+                <ScalarProperty Name="BASEPAY" ColumnName="BASEPAY" />
+                <ScalarProperty Name="GPURSE_R1" ColumnName="GPURSE_R1" />
+                <ScalarProperty Name="GPURSE_R2" ColumnName="GPURSE_R2" />
+                <ScalarProperty Name="GPURSE_R3" ColumnName="GPURSE_R3" />
+                <ScalarProperty Name="GPURSE_R4" ColumnName="GPURSE_R4" />
+                <ScalarProperty Name="GPURSE_R5" ColumnName="GPURSE_R5" />
+                <ScalarProperty Name="NPURSE_R1" ColumnName="NPURSE_R1" />
+                <ScalarProperty Name="NPURSE_R2" ColumnName="NPURSE_R2" />
+                <ScalarProperty Name="NPURSE_R3" ColumnName="NPURSE_R3" />
+                <ScalarProperty Name="NPURSE_R4" ColumnName="NPURSE_R4" />
+                <ScalarProperty Name="NPURSE_R5" ColumnName="NPURSE_R5" />
+                <ScalarProperty Name="GPURSE_R6" ColumnName="GPURSE_R6" />
+                <ScalarProperty Name="NPURSE_R6" ColumnName="NPURSE_R6" />
+                <ScalarProperty Name="R6" ColumnName="R6" />
+                <ScalarProperty Name="C1" ColumnName="C1" />
+                <ScalarProperty Name="C2" ColumnName="C2" />
+                <ScalarProperty Name="C3" ColumnName="C3" />
+                <ScalarProperty Name="C4" ColumnName="C4" />
+                <ScalarProperty Name="C1_GPURSE_R1" ColumnName="C1_GPURSE_R1" />
+                <ScalarProperty Name="C1_NPURSE_R1" ColumnName="C1_NPURSE_R1" />
+                <ScalarProperty Name="C2_GPURSE_R1" ColumnName="C2_GPURSE_R1" />
+                <ScalarProperty Name="C2_NPURSE_R1" ColumnName="C2_NPURSE_R1" />
+                <ScalarProperty Name="C3_GPURSE_R1" ColumnName="C3_GPURSE_R1" />
+                <ScalarProperty Name="C3_NPURSE_R1" ColumnName="C3_NPURSE_R1" />
+                <ScalarProperty Name="C4_GPURSE_R1" ColumnName="C4_GPURSE_R1" />
+                <ScalarProperty Name="C4_NPURSE_R1" ColumnName="C4_NPURSE_R1" />
+                <ScalarProperty Name="C1_GPURSE_R2" ColumnName="C1_GPURSE_R2" />
+                <ScalarProperty Name="C1_NPURSE_R2" ColumnName="C1_NPURSE_R2" />
+                <ScalarProperty Name="C2_GPURSE_R2" ColumnName="C2_GPURSE_R2" />
+                <ScalarProperty Name="C2_NPURSE_R2" ColumnName="C2_NPURSE_R2" />
+                <ScalarProperty Name="C3_GPURSE_R2" ColumnName="C3_GPURSE_R2" />
+                <ScalarProperty Name="C3_NPURSE_R2" ColumnName="C3_NPURSE_R2" />
+                <ScalarProperty Name="C4_GPURSE_R2" ColumnName="C4_GPURSE_R2" />
+                <ScalarProperty Name="C4_NPURSE_R2" ColumnName="C4_NPURSE_R2" />
+                <ScalarProperty Name="C1_GPURSE_R3" ColumnName="C1_GPURSE_R3" />
+                <ScalarProperty Name="C1_NPURSE_R3" ColumnName="C1_NPURSE_R3" />
+                <ScalarProperty Name="C2_GPURSE_R3" ColumnName="C2_GPURSE_R3" />
+                <ScalarProperty Name="C2_NPURSE_R3" ColumnName="C2_NPURSE_R3" />
+                <ScalarProperty Name="C3_GPURSE_R3" ColumnName="C3_GPURSE_R3" />
+                <ScalarProperty Name="C3_NPURSE_R3" ColumnName="C3_NPURSE_R3" />
+                <ScalarProperty Name="C4_GPURSE_R3" ColumnName="C4_GPURSE_R3" />
+                <ScalarProperty Name="C4_NPURSE_R3" ColumnName="C4_NPURSE_R3" />
+                <ScalarProperty Name="C1_GPURSE_R4" ColumnName="C1_GPURSE_R4" />
+                <ScalarProperty Name="C1_NPURSE_R4" ColumnName="C1_NPURSE_R4" />
+                <ScalarProperty Name="C2_GPURSE_R4" ColumnName="C2_GPURSE_R4" />
+                <ScalarProperty Name="C2_NPURSE_R4" ColumnName="C2_NPURSE_R4" />
+                <ScalarProperty Name="C3_GPURSE_R4" ColumnName="C3_GPURSE_R4" />
+                <ScalarProperty Name="C3_NPURSE_R4" ColumnName="C3_NPURSE_R4" />
+                <ScalarProperty Name="C4_GPURSE_R4" ColumnName="C4_GPURSE_R4" />
+                <ScalarProperty Name="C4_NPURSE_R4" ColumnName="C4_NPURSE_R4" />
+                <ScalarProperty Name="C1_GPURSE_R5" ColumnName="C1_GPURSE_R5" />
+                <ScalarProperty Name="C1_NPURSE_R5" ColumnName="C1_NPURSE_R5" />
+                <ScalarProperty Name="C2_GPURSE_R5" ColumnName="C2_GPURSE_R5" />
+                <ScalarProperty Name="C2_NPURSE_R5" ColumnName="C2_NPURSE_R5" />
+                <ScalarProperty Name="C3_GPURSE_R5" ColumnName="C3_GPURSE_R5" />
+                <ScalarProperty Name="C3_NPURSE_R5" ColumnName="C3_NPURSE_R5" />
+                <ScalarProperty Name="C4_GPURSE_R5" ColumnName="C4_GPURSE_R5" />
+                <ScalarProperty Name="C4_NPURSE_R5" ColumnName="C4_NPURSE_R5" />
+                <ScalarProperty Name="C1_GPURSE_R6" ColumnName="C1_GPURSE_R6" />
+                <ScalarProperty Name="C1_NPURSE_R6" ColumnName="C1_NPURSE_R6" />
+                <ScalarProperty Name="C2_GPURSE_R6" ColumnName="C2_GPURSE_R6" />
+                <ScalarProperty Name="C2_NPURSE_R6" ColumnName="C2_NPURSE_R6" />
+                <ScalarProperty Name="C3_GPURSE_R6" ColumnName="C3_GPURSE_R6" />
+                <ScalarProperty Name="C3_NPURSE_R6" ColumnName="C3_NPURSE_R6" />
+                <ScalarProperty Name="C4_GPURSE_R6" ColumnName="C4_GPURSE_R6" />
+                <ScalarProperty Name="C4_NPURSE_R6" ColumnName="C4_NPURSE_R6" />
+                <ScalarProperty Name="JUNK_SKINS" ColumnName="JUNK_SKINS" />
+                <ScalarProperty Name="J1_PURSE" ColumnName="J1_PURSE" />
+                <ScalarProperty Name="J2_PURSE" ColumnName="J2_PURSE" />
+                <ScalarProperty Name="J3_PURSE" ColumnName="J3_PURSE" />
+                <ScalarProperty Name="J4_PURSE" ColumnName="J4_PURSE" />
+                <ScalarProperty Name="J5_PURSE" ColumnName="J5_PURSE" />
+                <ScalarProperty Name="J6_PURSE" ColumnName="J6_PURSE" />
+                <ScalarProperty Name="J1_COUNT" ColumnName="J1_COUNT" />
+                <ScalarProperty Name="J2_COUNT" ColumnName="J2_COUNT" />
+                <ScalarProperty Name="J3_COUNT" ColumnName="J3_COUNT" />
+                <ScalarProperty Name="J4_COUNT" ColumnName="J4_COUNT" />
+                <ScalarProperty Name="J5_COUNT" ColumnName="J5_COUNT" />
+                <ScalarProperty Name="J6_COUNT" ColumnName="J6_COUNT" />
+                <ScalarProperty Name="JNET_SKINS" ColumnName="JNET_SKINS" />
+                <ScalarProperty Name="FLIGHTED_SKINS" ColumnName="FLIGHTED_SKINS" />
+                <ScalarProperty Name="LEADER_B" ColumnName="LEADER_B" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCORES">
+            <EntityTypeMapping TypeName="TGLFModel.SCORE">
+              <MappingFragment StoreEntitySet="SCORES">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="RNDNO" ColumnName="RNDNO" />
+                <ScalarProperty Name="PLYERID" ColumnName="PLYERID" />
+                <ScalarProperty Name="CAPDEX" ColumnName="CAPDEX" />
+                <ScalarProperty Name="HDCP" ColumnName="HDCP" />
+                <ScalarProperty Name="NET" ColumnName="NET" />
+                <ScalarProperty Name="THE_FLIGHT" ColumnName="THE_FLIGHT" />
+                <ScalarProperty Name="T0_CP" ColumnName="T0_CP" />
+                <ScalarProperty Name="T1_CP" ColumnName="T1_CP" />
+                <ScalarProperty Name="T2_CP" ColumnName="T2_CP" />
+                <ScalarProperty Name="T3_CP" ColumnName="T3_CP" />
+                <ScalarProperty Name="T4_CP" ColumnName="T4_CP" />
+                <ScalarProperty Name="T5_CP" ColumnName="T5_CP" />
+                <ScalarProperty Name="T6_CP" ColumnName="T6_CP" />
+                <ScalarProperty Name="T7_CP" ColumnName="T7_CP" />
+                <ScalarProperty Name="T8_CP" ColumnName="T8_CP" />
+                <ScalarProperty Name="T0_TM" ColumnName="T0_TM" />
+                <ScalarProperty Name="T1_TM" ColumnName="T1_TM" />
+                <ScalarProperty Name="T2_TM" ColumnName="T2_TM" />
+                <ScalarProperty Name="T3_TM" ColumnName="T3_TM" />
+                <ScalarProperty Name="T4_TM" ColumnName="T4_TM" />
+                <ScalarProperty Name="T5_TM" ColumnName="T5_TM" />
+                <ScalarProperty Name="T6_TM" ColumnName="T6_TM" />
+                <ScalarProperty Name="T7_TM" ColumnName="T7_TM" />
+                <ScalarProperty Name="T8_TM" ColumnName="T8_TM" />
+                <ScalarProperty Name="SK_R1" ColumnName="SK_R1" />
+                <ScalarProperty Name="SK_N1" ColumnName="SK_N1" />
+                <ScalarProperty Name="SK_R2" ColumnName="SK_R2" />
+                <ScalarProperty Name="SK_R3" ColumnName="SK_R3" />
+                <ScalarProperty Name="SK_R4" ColumnName="SK_R4" />
+                <ScalarProperty Name="SK_R5" ColumnName="SK_R5" />
+                <ScalarProperty Name="H_1" ColumnName="H_1" />
+                <ScalarProperty Name="H_2" ColumnName="H_2" />
+                <ScalarProperty Name="H_3" ColumnName="H_3" />
+                <ScalarProperty Name="H_4" ColumnName="H_4" />
+                <ScalarProperty Name="H_5" ColumnName="H_5" />
+                <ScalarProperty Name="H_6" ColumnName="H_6" />
+                <ScalarProperty Name="H_7" ColumnName="H_7" />
+                <ScalarProperty Name="H_8" ColumnName="H_8" />
+                <ScalarProperty Name="H_9" ColumnName="H_9" />
+                <ScalarProperty Name="H_10" ColumnName="H_10" />
+                <ScalarProperty Name="H_11" ColumnName="H_11" />
+                <ScalarProperty Name="H_12" ColumnName="H_12" />
+                <ScalarProperty Name="H_13" ColumnName="H_13" />
+                <ScalarProperty Name="H_14" ColumnName="H_14" />
+                <ScalarProperty Name="H_15" ColumnName="H_15" />
+                <ScalarProperty Name="H_16" ColumnName="H_16" />
+                <ScalarProperty Name="H_17" ColumnName="H_17" />
+                <ScalarProperty Name="H_18" ColumnName="H_18" />
+                <ScalarProperty Name="H_IN" ColumnName="H_IN" />
+                <ScalarProperty Name="H_OUT" ColumnName="H_OUT" />
+                <ScalarProperty Name="H_TOT" ColumnName="H_TOT" />
+                <ScalarProperty Name="H_IN_6" ColumnName="H_IN_6" />
+                <ScalarProperty Name="H_IN_3" ColumnName="H_IN_3" />
+                <ScalarProperty Name="H_OUT_6" ColumnName="H_OUT_6" />
+                <ScalarProperty Name="H_OUT_3" ColumnName="H_OUT_3" />
+                <ScalarProperty Name="ADJ_SCORE" ColumnName="ADJ_SCORE" />
+                <ScalarProperty Name="C0TOT" ColumnName="C0TOT" />
+                <ScalarProperty Name="C1TOT" ColumnName="C1TOT" />
+                <ScalarProperty Name="C2TOT" ColumnName="C2TOT" />
+                <ScalarProperty Name="C3TOT" ColumnName="C3TOT" />
+                <ScalarProperty Name="C4TOT" ColumnName="C4TOT" />
+                <ScalarProperty Name="C5TOT" ColumnName="C5TOT" />
+                <ScalarProperty Name="C6TOT" ColumnName="C6TOT" />
+                <ScalarProperty Name="C7TOT" ColumnName="C7TOT" />
+                <ScalarProperty Name="C8TOT" ColumnName="C8TOT" />
+                <ScalarProperty Name="CH_TOT" ColumnName="CH_TOT" />
+                <ScalarProperty Name="TEEORDER" ColumnName="TEEORDER" />
+                <ScalarProperty Name="ORGORDER" ColumnName="ORGORDER" />
+                <ScalarProperty Name="FLIGHT" ColumnName="FLIGHT" />
+                <ScalarProperty Name="CX0" ColumnName="CX0" />
+                <ScalarProperty Name="CX1" ColumnName="CX1" />
+                <ScalarProperty Name="CX2" ColumnName="CX2" />
+                <ScalarProperty Name="CX3" ColumnName="CX3" />
+                <ScalarProperty Name="CX4" ColumnName="CX4" />
+                <ScalarProperty Name="CX5" ColumnName="CX5" />
+                <ScalarProperty Name="CX6" ColumnName="CX6" />
+                <ScalarProperty Name="CX7" ColumnName="CX7" />
+                <ScalarProperty Name="CX8" ColumnName="CX8" />
+                <ScalarProperty Name="DUMMY" ColumnName="DUMMY" />
+                <ScalarProperty Name="ZNAME" ColumnName="ZNAME" />
+                <ScalarProperty Name="FX0" ColumnName="FX0" />
+                <ScalarProperty Name="FX1" ColumnName="FX1" />
+                <ScalarProperty Name="FX2" ColumnName="FX2" />
+                <ScalarProperty Name="FX3" ColumnName="FX3" />
+                <ScalarProperty Name="FX4" ColumnName="FX4" />
+                <ScalarProperty Name="FX5" ColumnName="FX5" />
+                <ScalarProperty Name="FX6" ColumnName="FX6" />
+                <ScalarProperty Name="FX7" ColumnName="FX7" />
+                <ScalarProperty Name="FX8" ColumnName="FX8" />
+                <ScalarProperty Name="BX0" ColumnName="BX0" />
+                <ScalarProperty Name="BX1" ColumnName="BX1" />
+                <ScalarProperty Name="BX2" ColumnName="BX2" />
+                <ScalarProperty Name="BX3" ColumnName="BX3" />
+                <ScalarProperty Name="BX4" ColumnName="BX4" />
+                <ScalarProperty Name="BX5" ColumnName="BX5" />
+                <ScalarProperty Name="BX6" ColumnName="BX6" />
+                <ScalarProperty Name="BX7" ColumnName="BX7" />
+                <ScalarProperty Name="BX8" ColumnName="BX8" />
+                <ScalarProperty Name="WALKER" ColumnName="WALKER" />
+                <ScalarProperty Name="COURSE_GRP" ColumnName="COURSE_GRP" />
+                <ScalarProperty Name="JUNK" ColumnName="JUNK" />
+                <ScalarProperty Name="RPTHRU" ColumnName="RPTHRU" />
+                <ScalarProperty Name="RP_TOT" ColumnName="RP_TOT" />
+                <ScalarProperty Name="RP0TOT" ColumnName="RP0TOT" />
+                <ScalarProperty Name="RP1TOT" ColumnName="RP1TOT" />
+                <ScalarProperty Name="RP2TOT" ColumnName="RP2TOT" />
+                <ScalarProperty Name="RP3TOT" ColumnName="RP3TOT" />
+                <ScalarProperty Name="RP4TOT" ColumnName="RP4TOT" />
+                <ScalarProperty Name="RP5TOT" ColumnName="RP5TOT" />
+                <ScalarProperty Name="RP6TOT" ColumnName="RP6TOT" />
+                <ScalarProperty Name="RP7TOT" ColumnName="RP7TOT" />
+                <ScalarProperty Name="RP8TOT" ColumnName="RP8TOT" />
+                <ScalarProperty Name="RPX0" ColumnName="RPX0" />
+                <ScalarProperty Name="RPX1" ColumnName="RPX1" />
+                <ScalarProperty Name="RPX2" ColumnName="RPX2" />
+                <ScalarProperty Name="RPX3" ColumnName="RPX3" />
+                <ScalarProperty Name="RPX4" ColumnName="RPX4" />
+                <ScalarProperty Name="RPX5" ColumnName="RPX5" />
+                <ScalarProperty Name="RPX6" ColumnName="RPX6" />
+                <ScalarProperty Name="RPX7" ColumnName="RPX7" />
+                <ScalarProperty Name="RPX8" ColumnName="RPX8" />
+                <ScalarProperty Name="RP_FX0" ColumnName="RP_FX0" />
+                <ScalarProperty Name="RP_FX1" ColumnName="RP_FX1" />
+                <ScalarProperty Name="RP_FX2" ColumnName="RP_FX2" />
+                <ScalarProperty Name="RP_FX3" ColumnName="RP_FX3" />
+                <ScalarProperty Name="RP_FX4" ColumnName="RP_FX4" />
+                <ScalarProperty Name="RP_FX5" ColumnName="RP_FX5" />
+                <ScalarProperty Name="RP_FX6" ColumnName="RP_FX6" />
+                <ScalarProperty Name="RP_FX7" ColumnName="RP_FX7" />
+                <ScalarProperty Name="RP_FX8" ColumnName="RP_FX8" />
+                <ScalarProperty Name="RP_BX0" ColumnName="RP_BX0" />
+                <ScalarProperty Name="RP_BX1" ColumnName="RP_BX1" />
+                <ScalarProperty Name="RP_BX2" ColumnName="RP_BX2" />
+                <ScalarProperty Name="RP_BX3" ColumnName="RP_BX3" />
+                <ScalarProperty Name="RP_BX4" ColumnName="RP_BX4" />
+                <ScalarProperty Name="RP_BX5" ColumnName="RP_BX5" />
+                <ScalarProperty Name="RP_BX6" ColumnName="RP_BX6" />
+                <ScalarProperty Name="RP_BX7" ColumnName="RP_BX7" />
+                <ScalarProperty Name="RP_BX8" ColumnName="RP_BX8" />
+                <ScalarProperty Name="RP_OUT" ColumnName="RP_OUT" />
+                <ScalarProperty Name="RP_OUT_3" ColumnName="RP_OUT_3" />
+                <ScalarProperty Name="RP_OUT_6" ColumnName="RP_OUT_6" />
+                <ScalarProperty Name="RP_IN" ColumnName="RP_IN" />
+                <ScalarProperty Name="RP_IN_3" ColumnName="RP_IN_3" />
+                <ScalarProperty Name="RP_IN_6" ColumnName="RP_IN_6" />
+                <ScalarProperty Name="T0_CALOWNER" ColumnName="T0_CALOWNER" />
+                <ScalarProperty Name="T0_CALPRICE" ColumnName="T0_CALPRICE" />
+                <ScalarProperty Name="T1_CALOWNER" ColumnName="T1_CALOWNER" />
+                <ScalarProperty Name="T1_CALPRICE" ColumnName="T1_CALPRICE" />
+                <ScalarProperty Name="T2_CALOWNER" ColumnName="T2_CALOWNER" />
+                <ScalarProperty Name="T2_CALPRICE" ColumnName="T2_CALPRICE" />
+                <ScalarProperty Name="T3_CALOWNER" ColumnName="T3_CALOWNER" />
+                <ScalarProperty Name="T3_CALPRICE" ColumnName="T3_CALPRICE" />
+                <ScalarProperty Name="T4_CALOWNER" ColumnName="T4_CALOWNER" />
+                <ScalarProperty Name="T4_CALPRICE" ColumnName="T4_CALPRICE" />
+                <ScalarProperty Name="T5_CALOWNER" ColumnName="T5_CALOWNER" />
+                <ScalarProperty Name="T5_CALPRICE" ColumnName="T5_CALPRICE" />
+                <ScalarProperty Name="T6_CALOWNER" ColumnName="T6_CALOWNER" />
+                <ScalarProperty Name="T6_CALPRICE" ColumnName="T6_CALPRICE" />
+                <ScalarProperty Name="T7_CALOWNER" ColumnName="T7_CALOWNER" />
+                <ScalarProperty Name="T7_CALPRICE" ColumnName="T7_CALPRICE" />
+                <ScalarProperty Name="T8_CALOWNER" ColumnName="T8_CALOWNER" />
+                <ScalarProperty Name="T8_CALPRICE" ColumnName="T8_CALPRICE" />
+                <ScalarProperty Name="FEMALE" ColumnName="FEMALE" />
+                <ScalarProperty Name="MATCHORD" ColumnName="MATCHORD" />
+                <ScalarProperty Name="T0_MT" ColumnName="T0_MT" />
+                <ScalarProperty Name="XINDEX" ColumnName="XINDEX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEETIMEs">
+            <EntityTypeMapping TypeName="TGLFModel.TEETIME">
+              <MappingFragment StoreEntitySet="TEETIME">
+                <ScalarProperty Name="FACID" ColumnName="FACID" />
+                <ScalarProperty Name="PLYFLD" ColumnName="PLYFLD" />
+                <ScalarProperty Name="PLYFLDNO" ColumnName="PLYFLDNO" />
+                <ScalarProperty Name="RNDNO" ColumnName="RNDNO" />
+                <ScalarProperty Name="COURSE" ColumnName="COURSE" />
+                <ScalarProperty Name="STARTTIME" ColumnName="STARTTIME" />
+                <ScalarProperty Name="STARTTIME2" ColumnName="STARTTIME2" />
+                <ScalarProperty Name="STARTTIME3" ColumnName="STARTTIME3" />
+                <ScalarProperty Name="STARTTIME4" ColumnName="STARTTIME4" />
+                <ScalarProperty Name="GAPMINUTES" ColumnName="GAPMINUTES" />
+                <ScalarProperty Name="GAP2" ColumnName="GAP2" />
+                <ScalarProperty Name="GAP3" ColumnName="GAP3" />
+                <ScalarProperty Name="GAP4" ColumnName="GAP4" />
+                <ScalarProperty Name="STARTHOLE" ColumnName="STARTHOLE" />
+                <ScalarProperty Name="STARTHOLE2" ColumnName="STARTHOLE2" />
+                <ScalarProperty Name="STARTHOLE3" ColumnName="STARTHOLE3" />
+                <ScalarProperty Name="STARTHOLE4" ColumnName="STARTHOLE4" />
+                <ScalarProperty Name="STARTGROUP" ColumnName="STARTGROUP" />
+                <ScalarProperty Name="DIRECTION" ColumnName="DIRECTION" />
+                <ScalarProperty Name="SHOTGUN" ColumnName="SHOTGUN" />
+                <ScalarProperty Name="TWOTIMES" ColumnName="TWOTIMES" />
+                <ScalarProperty Name="THREETIMES" ColumnName="THREETIMES" />
+                <ScalarProperty Name="FOURTIMES" ColumnName="FOURTIMES" />
+                <ScalarProperty Name="ONECOUNT" ColumnName="ONECOUNT" />
+                <ScalarProperty Name="TWOCOUNT" ColumnName="TWOCOUNT" />
+                <ScalarProperty Name="THREECNT" ColumnName="THREECNT" />
+                <ScalarProperty Name="XSOME" ColumnName="XSOME" />
+                <ScalarProperty Name="PPCART" ColumnName="PPCART" />
+                <ScalarProperty Name="PPTEAM" ColumnName="PPTEAM" />
+                <ScalarProperty Name="HOLE1" ColumnName="HOLE1" />
+                <ScalarProperty Name="HOLE2" ColumnName="HOLE2" />
+                <ScalarProperty Name="HOLE3" ColumnName="HOLE3" />
+                <ScalarProperty Name="HOLE4" ColumnName="HOLE4" />
+                <ScalarProperty Name="HOLE5" ColumnName="HOLE5" />
+                <ScalarProperty Name="HOLE6" ColumnName="HOLE6" />
+                <ScalarProperty Name="HOLE7" ColumnName="HOLE7" />
+                <ScalarProperty Name="HOLE8" ColumnName="HOLE8" />
+                <ScalarProperty Name="HOLE9" ColumnName="HOLE9" />
+                <ScalarProperty Name="HOLE10" ColumnName="HOLE10" />
+                <ScalarProperty Name="HOLE11" ColumnName="HOLE11" />
+                <ScalarProperty Name="HOLE12" ColumnName="HOLE12" />
+                <ScalarProperty Name="HOLE13" ColumnName="HOLE13" />
+                <ScalarProperty Name="HOLE14" ColumnName="HOLE14" />
+                <ScalarProperty Name="HOLE15" ColumnName="HOLE15" />
+                <ScalarProperty Name="HOLE16" ColumnName="HOLE16" />
+                <ScalarProperty Name="HOLE17" ColumnName="HOLE17" />
+                <ScalarProperty Name="HOLE18" ColumnName="HOLE18" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
