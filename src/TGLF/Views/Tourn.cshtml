@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Tourn";
+}
+
+<h2>Tourn</h2>
+<select>
+    @for (var i = 1; i < 10; i++)
+    {
+     <option value="item "+@i.tostring>Volvo</option>
+    }
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>

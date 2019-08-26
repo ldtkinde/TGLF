@@ -1,0 +1,610 @@
+﻿@model TGLF.EVENT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EVENT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PLYERS_PER_TM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLYERS_PER_TM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NO_ROUNDS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NO_ROUNDS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.START_ROUND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.START_ROUND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R1_FORMAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R1_FORMAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R2_FORMAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R2_FORMAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R3_FORMAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R3_FORMAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R4_FORMAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R4_FORMAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R5_FORMAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R5_FORMAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R1_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R1_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R2_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R2_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R3_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R3_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R4_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R4_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R5_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R5_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SKINS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SKINS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NETSKINS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NETSKINS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HDCP_PCT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDCP_PCT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IND_NET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IND_NET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BLIND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BLIND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IND_GRS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IND_GRS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HDCP_TYP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDCP_TYP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GM_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GM_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EV_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EV_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TM_SKINS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TM_SKINS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LEAGUE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LEAGUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X1_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X1_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X2_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X2_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X3_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X3_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X4_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X4_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X5_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X5_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y1_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y1_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y2_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y2_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y3_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y3_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y4_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y4_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y5_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y5_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z1_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z1_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z2_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z2_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z3_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z3_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z4_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z4_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z5_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z5_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NINER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NINER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.F_OR_B1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.F_OR_B1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.F_OR_B2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.F_OR_B2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.F_OR_B3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.F_OR_B3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.F_OR_B4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.F_OR_B4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.F_OR_B5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.F_OR_B5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MULT_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MULT_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RND_ROBIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RND_ROBIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SENT_UP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SENT_UP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUOTABASE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUOTABASE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TMCAP_PCENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TMCAP_PCENT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOTE_WALKERS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOTE_WALKERS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TR_OR_RND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TR_OR_RND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FLIGHTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FLIGHTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAT_ADJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAT_ADJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SKIN_SPAN_TEE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SKIN_SPAN_TEE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R6_FORMAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R6_FORMAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.R6_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.R6_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X6_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X6_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y6_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y6_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Z6_COURSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Z6_COURSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.F_OR_B6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.F_OR_B6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JUNK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JUNK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FBNINES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FBNINES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRUNKDOLL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRUNKDOLL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ROUNDDOLL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROUNDDOLL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPONSOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPONSOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RP_RESULTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RP_RESULTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TM_JUNK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TM_JUNK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POST_SCORES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POST_SCORES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LEAGRND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LEAGRND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LEAGTEEBOX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LEAGTEEBOX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HDCP_PCT_W)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDCP_PCT_W)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVG_HDCP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVG_HDCP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAPOFFLOW)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAPOFFLOW)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
