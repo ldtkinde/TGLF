@@ -187,7 +187,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\EVENTClass.cs" />
+    <Compile Include="Models\COURSEListClass.cs" />
+    <Compile Include="Models\EVENTListClass.cs" />
     <Compile Include="PAYMENT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

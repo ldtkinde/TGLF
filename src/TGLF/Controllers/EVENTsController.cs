@@ -7,13 +7,20 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TGLF;
+using TGLF.Models;
 
 namespace TGLF.Controllers
 {
     public class EVENTsController : Controller
     {
         private TGLFEntities db = new TGLFEntities();
-
+//        public EVENT ev = new EVENT();
+        public class EventBucket
+        {
+            public EVENT ev { set; get; }
+            public EVENTListClass evlist { set; get; }
+            public COURSEListClass cslist { set; get; }
+        }
         // GET: EVENTs
         public ActionResult Index()
         {
@@ -21,9 +28,39 @@ namespace TGLF.Controllers
         }
 
         //        public JsonResult EventListJSON()
-        public ActionResult EventListJSON()
+        public ActionResult EventList()
         {
-            return View(db.EVENTs.ToList());
+            EventBucket eb = new EventBucket();
+            eb.ev =
+                db.EVENTs
+                 .Where(ali => ali.FACID == "TupperKinder")
+                 .OrderByDescending(ali => ali.PLYFLD)
+                 .ThenByDescending(ali => ali.PLYFLDNO)
+                 .FirstOrDefault();
+            var evlist =
+                db.EVENTs
+                 .Select(ali => new
+                 {
+                     FACID = ali.FACID,
+                     PLYFLD = ali.PLYFLD,
+                     PLYFLDNO = ali.PLYFLDNO,
+                     EV_NAME = ali.EV_NAME
+                 })
+                 .Where(ali => ali.FACID == "TupperKinder")
+                 .OrderByDescending(ali => ali.PLYFLD)
+                 .ThenByDescending(ali => ali.PLYFLDNO);
+            var cslist =
+                db.COURSEs
+                 .Select(ali => new
+                 {
+                     FACID = ali.FACID,
+                     ID = ali.ID,
+                     NAME = ali.NAME
+                 })
+                 .Where(ali => ali.FACID == "TupperKinder")
+                 .OrderByDescending(ali => ali.NAME);
+            eb.cslist = (COURSEListClass)cslist;
+            return View(eb);            
         }
         // GET: EVENTs/Details/5
         public ActionResult Details(string id)
